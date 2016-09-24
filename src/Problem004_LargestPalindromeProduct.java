@@ -1,7 +1,7 @@
 /**
  * Created by Sneeuwpopsneeuw on 24-Feb-16.
  */
-public class Problem4_LargestPalindromeProduct {
+public class Problem004_LargestPalindromeProduct {
     public static void main (String args[]) {
         for (int i=999; i>750; i--){
             for (int j=999; j>750; j--) {

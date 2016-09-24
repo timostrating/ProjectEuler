@@ -1,7 +1,7 @@
 /**
  * Created by Sneeuwpopsneeuw on 09-Aug-16.
  */
-public class Problem9_SpecialPythagoreanTriplet {
+public class Problem009_SpecialPythagoreanTriplet {
 
 
     public static void main (String args[]) {

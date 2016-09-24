@@ -1,7 +1,7 @@
 /**
  * Created by Sneeuwpopsneeuw on 23-Feb-16.
  */
-public class Problem3_LargestPrimeFactor {
+public class Problem003_LargestPrimeFactor {
     public static void main (String args[]) {
         long N = 600851475143L;
         long p = 2;

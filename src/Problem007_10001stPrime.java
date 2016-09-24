@@ -1,7 +1,7 @@
 /**
  * Created by Sneeuwpopsneeuw on 12-Apr-16.
  */
-public class Problem7_10001stPrime {
+public class Problem007_10001stPrime {
 
     public static void main (String args[]) {
         magic();

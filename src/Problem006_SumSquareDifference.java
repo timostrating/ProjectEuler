@@ -1,7 +1,7 @@
 /**
  * Created by Sneeuwpopsneeuw on 27-Apr-16.
  */
-public class Problem6_SumSquareDifference {
+public class Problem006_SumSquareDifference {
     public static void main(String args[]) {
         int amount = 100;
         long a = 0;
