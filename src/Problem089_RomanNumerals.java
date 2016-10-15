@@ -65,36 +65,40 @@ public class Problem089_RomanNumerals { // TODO: Problem089_RomanNumerals
                 "MMDXCVIIII","MMMDCCCCVIII","MMMMDCCCCXXXXVI","MMDCCCXXXV","MMCXCIV","MCMLXXXXIII","MMMCCCLXXVI","MMMMDCLXXXV","CMLXIX","DCXCII","MMXXVIII","MMMMCCCXXX","XXXXVIIII"
         };
         int ans = 0;
-
-        // MMMM D CCCC XXXX V I         MMMM CM XL V I      <-- good
-
-        // XXXXVIIII    ==  IL      <-- it goes wrong here
-        // XXXXV        ==  VL      <-- it goes wrong here
+        int value = 0;
 
         for(int i=0; i<map.length; i++) {
             String text = map[i];
-            char[] chars = {'I', 'X', 'C'};
-            char[] charsMid = {'V', 'L', 'D'};
 
-            for(int j=0; j<chars.length; j++) {
-                int n = 0;
+            for(int j=0; j<text.length(); j++) {
 
-                for(int k=0; k<text.length(); k++) {
-                    if (text.charAt(k) == chars[j])
-                        n++;
+                switch (text.charAt(j)) {
+                    case 'M':  value += 1000;  break;
+                    case 'D':  value += 500;  break;
+                    case 'C':  value += 100;  break;
+                    case 'L':  value += 50;  break;
+                    case 'X':  value += 10;  break;
+                    case 'V':  value += 5;  break;
+                    case 'I':  value += 1;  break;
+
+                    default:
+                        System.err.println("It is a lie");
+                        break;
                 }
-
-                if (n == 4)
-                    ans += (text.contains(""+charsMid[j]))? 3 : 2;
             }
         }
 
-        System.out.println("ans = " + ans);
+        System.out.println("ans = " + value);
     }
 }
 
 
 
+
+// MMMM D CCCC XXXX V I         MMMM CM XL V I      <-- good
+
+// XXXXVIIII    ==  IL      <-- it goes wrong here
+// XXXXV        ==  VL      <-- it goes wrong here
 
 
 

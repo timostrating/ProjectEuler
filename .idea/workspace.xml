@@ -2,90 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21a1342f-5094-4825-9b5b-54404ce6165e" name="Default" comment="Problem053_CombinatoricSelections">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem10_SummationOfPrimes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem11_LargestProductInAGrid.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem12_HighlyDivisibleTriangularNumber.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem13_LargeSum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem14_LongestCollatzSequence.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem15_LatticePaths.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem16_PowerDigitSum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem17_NumberLetterCount.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem18_MaximumPathSumI.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem19_CountingSundays.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem1_MultiplesOf3And5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem20_FactorialDigitSum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem21_AmicableNumbers.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem22_NamesScores.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem23_NonAbundantSums.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem24_LexicographicPermutations.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem25_1000digitFibonacciNumber.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem26_ReciprocalCycles.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem27_QuadraticPrimes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem28_NumberSpiralDiagonals.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem29_DistinctPowers.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem2_EvenFibonacciNumbers.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem30_DigitFifthPowers.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem31_CoinSums.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem32_PandigitalProducts.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem33_DigitCancellingFractions.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem34_DigitFactorials.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem35_CircularPrimes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem36_DoubleBasePalindromes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem37_TruncatablePrimes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem38_PandigitalMultiples.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem39_IntegerRightTriangles.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem3_LargestPrimeFactor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem40_ChampernowneConstant.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem41_PandigitalPrime.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem42_CodedTriangleNumbers.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem43_SubStringDivisibility.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem44_PentagonNumbers.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem45_TriangularPentagonalAndHexagonal.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem46_GoldbachOtherConjecture.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem47_DistinctPrimesFactors.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem48_SelfPower.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem49_PrimePermutations.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem4_LargestPalindromeProduct.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem50_ConsecutivePrimeSum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem51_ConsecutivePrimeSum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem52_PermutedMultiples.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem53_CombinatoricSelections.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem54_PokerHands.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem55_LychrelNumbers.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem56_PowerfulDigitSum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem57_SquareRootConvergents$Fraction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem57_SquareRootConvergents.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem58_SpiralPrimes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem59_XOR_Decryption.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem5_SmallestMultiple.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem60_PrimePairSets.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem61_CyclicalFigurateNumbers.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem62_CubicPermutations.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem63_PowerfulDigitCounts.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem65_ConvergentsOfE.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem66_DiophantineEquation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem67_MaximumPathSumII.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem6_SumSquareDifference.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem70_TotientPermutation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem74_DigitFactorialChains.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem76_CountingSummations.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem78_CoinPartitions.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem79_PasscodeDerivation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem7_10001stPrime.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem80_SquareRootDigitalExpansion.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem81_PathSum_TwoWays.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem82_PathSum_ThreeWays.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem89_RomanNumerals.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem8_LargestProductInASerie.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem92_SquareDigitChains.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem96_SuDoku$Sudoku.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem96_SuDoku$SudokuTile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem96_SuDoku.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem97_LargeNon_MersennePrime.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem99_LargestExponential$megaNumber.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem99_LargestExponential.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem9_SpecialPythagoreanTriplet.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProjectEuler/Problem.class" afterPath="$PROJECT_DIR$/out/production/ProjectEuler/Problem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problem089_RomanNumerals.java" afterPath="$PROJECT_DIR$/src/Problem089_RomanNumerals.java" />
     </list>
@@ -152,19 +69,9 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Problem571_SuperPandigitalNumbers.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Problem571_SuperPandigitalNumbers.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Problem571_SuperPandigitalNumbers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.06692913">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Problem081_PathSum_TwoWays.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Problem081_PathSum_TwoWays.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
               <folding />
@@ -172,22 +79,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Problem082_PathSum_ThreeWays.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Problem082_PathSum_ThreeWays.java">
+      <file leaf-file-name="Problem032_PandigitalProducts.class" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out/production/ProjectEuler/Problem032_PandigitalProducts.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="24" selection-start-line="4" selection-start-column="4" selection-end-line="21" selection-end-column="5" />
-              <folding />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#1223#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="learnJavaInYMin.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/learnJavaInYMin.txt">
+      <file leaf-file-name="Problem005_SmallestMultiple.class" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out/production/ProjectEuler/Problem005_SmallestMultiple.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#252#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Problem001_MultiplesOf3And5.class" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/out/production/ProjectEuler/Problem001_MultiplesOf3And5.class">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="324" column="12" selection-start-line="324" selection-start-column="12" selection-end-line="335" selection-end-column="22" />
-              <folding />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#467#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Problem002_EvenFibonacciNumbers.class" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out/production/ProjectEuler/Problem002_EvenFibonacciNumbers.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#309#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Problem051_ConsecutivePrimeSum.class" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out/production/ProjectEuler/Problem051_ConsecutivePrimeSum.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#206#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -769,7 +716,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.014198783" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -781,7 +728,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21196754" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296146" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1671875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1671875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24931054" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -849,41 +796,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Problem113_NonBouncyNumbers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10897436">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem243_Resilience.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7192308">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem136_SingletonDifference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem102_TriangleContainment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="285" column="0" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem033_DigitCancellingFractions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Problem002_EvenFibonacciNumbers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1209,9 +1121,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Problem571_SuperPandigitalNumbers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06692913">
+        <state vertical-scroll-proportion="0.0">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/ProjectEuler/Problem051_ConsecutivePrimeSum.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#206#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/ProjectEuler/Problem032_PandigitalProducts.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#1223#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/ProjectEuler/Problem005_SmallestMultiple.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#252#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/ProjectEuler/Problem002_EvenFibonacciNumbers.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#309#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/ProjectEuler/Problem001_MultiplesOf3And5.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#467#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
