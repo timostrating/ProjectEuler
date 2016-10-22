@@ -36,6 +36,7 @@ public class Problem {
 
 
 
+
     protected static Boolean isPrime(int num){
         if(num <= 1) return(false);  // important
         if(num == 2) return(true);
@@ -44,7 +45,6 @@ public class Problem {
         }
         return(true); // it is prime if we end up here
     }
-
 
     protected static Boolean isPrime(long num){
         if(num <= 1L) return(false);  // important
@@ -55,6 +55,17 @@ public class Problem {
         return(true); // it is prime if we end up here
     }
 
+
+
+
+    protected static int digitSum(BigInteger value) { return digitSum(value.toString()); }
+    protected static int digitSum(String text) {
+        int value = 0;
+        for(int i=0; i < text.length(); i++) {
+            value += Character.getNumericValue( text.charAt(i) );
+        }
+        return value;
+    }
 
 
 
