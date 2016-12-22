@@ -39,18 +39,18 @@ public class Problem054_PokerHands {  // TODO: Problem054_PokerHands
 
 /*
 
-High Card:          Highest value card.
-One Pair:           Two cards of the same value.
-Two Pairs:          Two different pairs.
-Three of a Kind:    Three cards of the same value.
-Straight:           All cards are consecutive values.
-Flush:              All cards of the same suit.
-Full House:         Three of a kind and a pair.
-Four of a Kind:     Four cards of the same value.
-Straight Flush:     All cards are consecutive values of same suit.
-Royal Flush:        Ten, Jack, Queen, King, Ace, in same suit.
+High Card:          Highest value card.                                 value                  1
+One Pair:           Two cards of the same value.                        value                  2
+Two Pairs:          Two different pairs.                                value                  2*2
+Three of a Kind:    Three cards of the same value.                      value                  3
+Straight:           All cards are consecutive values.                   VALUE                  5>
+Flush:              All cards of the same suit.                                     suit       HHHHH
+Full House:         Three of a kind and a pair.                         value                  3*2 2*2
+Four of a Kind:     Four cards of the same value.                       value                  4
+Straight Flush:     All cards are consecutive values of same suit.      VALUE       suit       5> HHHHH
+Royal Flush:        Ten, Jack, Queen, King, Ace, in same suit.         _VALUE_      suit       TJQKA HHHHH
 
-2, 3, 4, 5, 6, 7, 8, 9, T, J, Q, K, A,            10,Jack, Queen, King, Ace.
+2, 3, 4, 5, 6, 7, 8, 9, T, J, Q, K, A,            10, Jack, Queen, King, Ace.
 
 C   clubs
 S   Spades
