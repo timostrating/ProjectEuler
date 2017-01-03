@@ -4,19 +4,6 @@ import java.math.BigInteger;
  * Created by Sneeuwpopsneeuw on 20-Aug-16.
  */
 public class Problem {
-
-    protected static int getAmountOfDividers(int value) {
-        int divisors = 1;
-        for (int j=2; j < value; j++) {   // we could a loop that goes from 2 to the sqrt of the value
-            if (value % j == 0) {
-                divisors += j;          // If we did ^^ we also need to calculate  value / 2  and add that to divisors
-            }
-        }
-        return divisors;
-    }
-
-
-
     public static int factorial(int n) {
         int fact = 1; // this will be the result
         for (int i = 1; i <= n; i++) {
