@@ -44,6 +44,42 @@ public class Problem {
 
 
 
+    protected static int amoutOfFactors(int number){
+        int count;
+        int result = 1;
+        for (int i=2; i <= (number); i++){
+            count = 0;
+            while (number % i == 0) {
+                number /= i;
+                count++;
+            }
+            if(count == 0)
+                continue;
+            result *= (count+1);
+        }
+        return result;
+    }
+
+    // TODO: example of better way
+    //  ggd(4352, 4342)
+    //  4352 - 4342 = 10
+    //  10 = 2 * 5
+    //  loop ^^^^^
+    //      check if possible  4352 % 5 != 0
+    //      ans = 2
+    protected static int ggd(int m, int n) {  // TODO: there are faster ways of winding the GGD and KGV
+        return (n == 0)? m : ggd(n, m % n);
+    }
+
+    protected static int lcm(int m, int n) { return kgv(m, n); }  // Kleinste Gemene Veelvoud vertaalt niet helemaal naar het engels.
+    protected static int kgv(int m, int n) {  // TODO: there are faster ways of winding the GGD and KGV
+        int o = ggd(m, n);
+        return(m * n) / o;
+    }
+
+
+
+
 
     protected static int digitSum(BigInteger value) { return digitSum(value.toString()); }
     protected static int digitSum(String text) {
