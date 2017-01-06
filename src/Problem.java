@@ -44,7 +44,7 @@ public class Problem {
 
 
 
-    protected static int amoutOfFactors(int number){
+    protected static int amoutOfDividors(int number){
         int count;
         int result = 1;
         for (int i=2; i <= (number); i++){
@@ -60,6 +60,9 @@ public class Problem {
         return result;
     }
 
+
+
+
     // TODO: example of better way
     //  ggd(4352, 4342)
     //  4352 - 4342 = 10
@@ -67,12 +70,16 @@ public class Problem {
     //  loop ^^^^^
     //      check if possible  4352 % 5 != 0
     //      ans = 2
-    protected static int ggd(int m, int n) {  // TODO: there are faster ways of winding the GGD and KGV
-        return (n == 0)? m : ggd(n, m % n);
+    protected static int ggd(int m, int n) {  // Dutch  -  Grootste Gemene Deler
+        return gcd(n, m); }
+    protected static int gcd(int m, int n) {  // English  -  Greatest Common Divisor
+        return (n == 0)? m : gcd(n, m % n);
     }
 
-    protected static int lcm(int m, int n) { return kgv(m, n); }  // Kleinste Gemene Veelvoud vertaalt niet helemaal naar het engels.
-    protected static int kgv(int m, int n) {  // TODO: there are faster ways of winding the GGD and KGV
+    // TODO: there are faster ways of winding the GCD and KGV
+    protected static int kgv(int m, int n) {  // Dutch  -  Kleinste Gemene Veelvoud
+        return lcm(m, n); }
+    protected static int lcm(int m, int n) {  // English  -  Least Common Multiple
         int o = ggd(m, n);
         return(m * n) / o;
     }
