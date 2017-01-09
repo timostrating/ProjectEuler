@@ -80,7 +80,7 @@ public class Problem {
     protected static int kgv(int m, int n) {  // Dutch  -  Kleinste Gemene Veelvoud
         return lcm(m, n); }
     protected static int lcm(int m, int n) {  // English  -  Least Common Multiple
-        int o = ggd(m, n);
+        int o = gcd(m, n);
         return(m * n) / o;
     }
 
