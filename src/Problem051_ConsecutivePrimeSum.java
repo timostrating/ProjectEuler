@@ -1,41 +1,47 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by Sneeuwpopsneeuw on 20-Aug-16.
  */
 public class Problem051_ConsecutivePrimeSum extends Problem{  // TODO: Problem051_ConsecutivePrimeSum
-    ArrayList<Integer> primeList = new ArrayList<>();
-
     public static void main(String[] args) { new Problem051_ConsecutivePrimeSum().start(); }
     public void start() {
-        for (int i=1; i < 10_000; i++) {
-            if (isPrime(i))
-                primeList.add(i);
-        }
+//        ArrayList<Integer> primeList = new ArrayList<>();
+//        for (int i = 1; i < 10_000; i++) {
+//            if (isPrime(i))
+//                primeList.add(i);
+//        }
+        int index = 0;
+        while (true) {
+            String str = "" + index;
+            ArrayList<Integer> oldNumbers = new ArrayList<>();
 
-        int value = 0;
-        for (int i=100; i <= 500; i++) {
-            value = run(i+"", new int[] {0} );   // TODO
-            System.out.println( value );
+            if (index % 1000 == 0)
+                System.out.println(index);
 
-            if (value > 6)
-                return;
-        }
-    }
+            for (int i = 0; i < str.length() - 1; i++) {
+                for (int j = i + 1; j < str.length(); j++) {
+                    char[] array = str.toCharArray();
 
-    public int run(String str, int[] indexes) {
-        char[] chars = str.toCharArray();
-        int output = 0;
+                    for (char ch = '0'; ch < '9'; ch++) {
+                        array[i] = ch;
+                        array[j] = ch;
 
-        for (int i=0; i <= 9; i++) {
-            for (int j=0; j < indexes.length; j++) {
-                chars[indexes[j]] = (char)(48 + i);   // TODO
+                        int number = Integer.parseInt(String.valueOf(array));
+                        if (isPrime(number))
+                            oldNumbers.add(number);
+                    }
+
+                    if (oldNumbers.size() == 7) {
+                        System.out.println("");
+                        System.out.println(Arrays.toString(oldNumbers.toArray()));
+                        return;
+                    } else oldNumbers.clear();
+                }
             }
-            if (primeList.contains( Integer.parseInt( new String(chars) ) ))
-                output++;
+            index++;
         }
-
-        return output;
     }
 }
 
