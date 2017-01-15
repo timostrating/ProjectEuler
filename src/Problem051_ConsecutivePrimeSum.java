@@ -6,42 +6,62 @@ import java.util.Arrays;
  */
 public class Problem051_ConsecutivePrimeSum extends Problem{  // TODO: Problem051_ConsecutivePrimeSum
     public static void main(String[] args) { new Problem051_ConsecutivePrimeSum().start(); }
-    public void start() {
-//        ArrayList<Integer> primeList = new ArrayList<>();
-//        for (int i = 1; i < 10_000; i++) {
-//            if (isPrime(i))
-//                primeList.add(i);
-//        }
-        int index = 0;
-        while (true) {
-            String str = "" + index;
-            ArrayList<Integer> oldNumbers = new ArrayList<>();
+    private void start() {
 
-            if (index % 1000 == 0)
-                System.out.println(index);
+        for (int index=0; true; index ++) {
+            String str = "" + index;
+
+            for (int i = 0; i < str.length(); i++) {
+                check(str, i);
+            }
 
             for (int i = 0; i < str.length() - 1; i++) {
                 for (int j = i + 1; j < str.length(); j++) {
-                    char[] array = str.toCharArray();
-
-                    for (char ch = '0'; ch < '9'; ch++) {
-                        array[i] = ch;
-                        array[j] = ch;
-
-                        int number = Integer.parseInt(String.valueOf(array));
-                        if (isPrime(number))
-                            oldNumbers.add(number);
-                    }
-
-                    if (oldNumbers.size() == 7) {
-                        System.out.println("");
-                        System.out.println(Arrays.toString(oldNumbers.toArray()));
-                        return;
-                    } else oldNumbers.clear();
+                    check(str, i, j);
                 }
             }
-            index++;
+
+            for (int i = 0; i < str.length() - 2; i++) {
+                for (int j = i + 1; j < str.length() - 1; j++) {
+                    for (int k = j + 1; k < str.length(); k++) {
+                        check(str, i, j, k);
+                    }
+                }
+            }
         }
+    }
+
+    private void check(String str, int... indexes) {
+        ArrayList<Integer> oldNumbers = new ArrayList<>();
+        char[] array = str.toCharArray();
+
+        for (char ch = '0'; ch <= '9'; ch++) {
+            for (int i : indexes) {
+                array[i] = ch;
+            }
+
+            int number = Integer.parseInt(String.valueOf(array));
+            if (isPrime(number))
+                oldNumbers.add(number);
+        }
+
+        if (oldNumbers.size() == 8) {
+            if (arrayElementsSameStringLengh( oldNumbers.stream().mapToInt(i -> i).toArray() )) {
+                System.out.println("");
+                System.out.println(Arrays.toString(oldNumbers.toArray()));
+                throw new RuntimeException(); // we found something lets quit
+            }
+        }
+    }
+
+    private boolean arrayElementsSameStringLengh( int[] array ) {
+        int length = String.valueOf(array[0]).length();
+        for (int i=1; i < array.length; i++) {
+            if (String.valueOf(array[i]).length() != length)
+                return false;
+        }
+
+        return true;
     }
 }
 
