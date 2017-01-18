@@ -3,7 +3,7 @@
  */
 public class Problem024_LexicographicPermutations {
     /*
-        MMMM   Why should you program something when you just can calculate it on paper
+        MMMM   Why should you program something when you just can calculate it in the comments
 
        _0 1 2 3 4 5 6 7 8 9     0 * (10!)       0 * 0       =       0               1000001
         2_0 1 3 4 5 6 7 8 9     2 * (9!)        2 * 362880  =       725760          274241

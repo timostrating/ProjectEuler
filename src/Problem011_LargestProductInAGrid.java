@@ -36,8 +36,8 @@ public class Problem011_LargestProductInAGrid {
 
         //  |
         //  v
-        for( int x = 0;  x < MAPSIZE;  x++) {
-            for( int y = 0;  y < MAPSIZE - 3;  y++) {
+        for( int x=0;  x < MAPSIZE;  x++) {
+            for( int y=0;  y < MAPSIZE - 3;  y++) {
                 cur = 1;
                 for (int i = 0; i < 4; i++) {
                     cur *= map[y+i][x];
@@ -55,10 +55,10 @@ public class Problem011_LargestProductInAGrid {
         System.out.println("11111111111111111111111111111111111111111111111111111111");
 
         // -->
-        for( int x = 0;  x < MAPSIZE - 3;  x++) {
-            for( int y = 0;  y < MAPSIZE;  y++) {
+        for( int x=0;  x < MAPSIZE - 3;  x++) {
+            for( int y=0;  y < MAPSIZE;  y++) {
                 cur = 1;
-                for (int i = 0; i < 4; i++) {
+                for (int i=0; i < 4; i++) {
                     cur *= map[y][x+i];
                     System.out.print( map[y][x+i] + " * ");
                 }

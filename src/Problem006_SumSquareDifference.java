@@ -7,11 +7,11 @@ public class Problem006_SumSquareDifference {
         long a = 0;
         long b = 0;
 
-        for (int i=0; i<=amount; i++) {
+        for (int i=0; i <= amount; i++) {
             a += i*i;
         }
 
-        for (int i=0; i<=amount; i++) {
+        for (int i=0; i <= amount; i++) {
             b += i;
         }
         b *= b;

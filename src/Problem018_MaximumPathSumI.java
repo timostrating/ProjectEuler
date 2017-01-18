@@ -24,8 +24,8 @@ public class Problem018_MaximumPathSumI {
             { 4, 62, 98, 27, 23,  9, 70, 98, 73, 93, 38, 53, 60,  4, 23}
         };
 
-        for (int y = 13; y >= 0; y--) {
-            for (int i = 0; i <= y; i++) {
+        for (int y=13; y >= 0; y--) {
+            for (int i=0; i <= y; i++) {
                 map[y][i] += (map[y + 1][i] > map[y + 1][i + 1]) ? map[y + 1][i] : map[y + 1][i + 1];
                 System.out.println(y + ", " + i + " : " + map[y][i]);
             }

@@ -7,8 +7,8 @@ public class Problem015_LatticePaths {
         int height = 4;
         long routes = 2;
 
-        for(int x = 0; x < width -1; x++) {
-            for (int y = 0; y < height -1; y++) {
+        for(int x=0; x < width -1; x++) {
+            for (int y=0; y < height -1; y++) {
                 routes += 1;
                 System.out.println(routes);
             }

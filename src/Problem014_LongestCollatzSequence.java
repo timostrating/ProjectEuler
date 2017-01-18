@@ -7,7 +7,7 @@ public class Problem014_LongestCollatzSequence {
         int teller = 0;
         int highestTeller = 0;
 
-        for (long i = getal; i > 5; i--) {
+        for (long i=getal; i > 5; i--) {
             getal = i;
             teller = 0;
             do {

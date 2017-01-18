@@ -16,7 +16,7 @@ public class Problem016_PowerDigitSum {
         System.out.println(text);
 
         long ans = 0;
-        for (int i = 0; i < text.length(); i ++) {
+        for (int i=0; i < text.length(); i ++) {
             ans += Character.getNumericValue( text.charAt(i) );
             System.out.print(Character.getNumericValue( text.charAt(i) ) + " + ");
         }
