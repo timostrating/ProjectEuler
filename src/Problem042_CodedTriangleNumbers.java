@@ -13,7 +13,7 @@ public class Problem042_CodedTriangleNumbers {
 
         ArrayList<Integer> triangleNumbers = new ArrayList<Integer>();
 
-        for (double i = 1; i < 500; i++) {
+        for (double i=1; i < 500; i++) {
             double tmp = (1F/2F) * i * (i+1F);
             triangleNumbers.add( (int)tmp );
             System.out.println( tmp );
@@ -22,7 +22,7 @@ public class Problem042_CodedTriangleNumbers {
 
         for (String s : wordList) {  // foreach the java way
             int wordValue = 0;
-            for (int j = 0; j < s.length(); j++) {
+            for (int j=0; j < s.length(); j++) {
                 wordValue += (Character.getNumericValue(s.charAt(j)) - 9);
                 System.out.println(s.charAt(j) + " : " + (Character.getNumericValue(s.charAt(j)) - 9) + " : " + wordValue);
             }

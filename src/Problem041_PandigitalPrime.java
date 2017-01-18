@@ -5,7 +5,7 @@ public class Problem041_PandigitalPrime extends Problem{
     static int[] numbers = new int[] { 9,8,7,6,5,4,3,2,1};
 
     public static void main(String[] args) {
-        for(long i=987654321; i>1; i--) {
+        for(long i=987654321; i > 1; i--) {
             if(isPandigital(i)) {
                 System.out.println("isPandigital : " + i);
                 if (isPrime(i)) {
@@ -21,8 +21,8 @@ public class Problem041_PandigitalPrime extends Problem{
         boolean flag = false;
 
         if(num < 9_876_543_210L) { // largest possible Pendigital in base 10
-            for (int i = text.length(); i > 0; i--) {
-                for (int j = 0; j < text.length(); j++) {
+            for (int i=text.length(); i > 0; i--) {
+                for (int j=0; j < text.length(); j++) {
                     if (i == Character.getNumericValue(text.charAt(j))) {
                         if (flag)               // if the flag is already triggered that means we have 2 the same numbers.
                             return (false);

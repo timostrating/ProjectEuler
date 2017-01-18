@@ -5,7 +5,7 @@ public class Problem030_DigitFifthPowers {
     public static void main(String args[]) {
         int ans = 0;
 
-        for (int i = 2; i < 999999; i++) {  // while true
+        for (int i=2; i < 999999; i++) {  // while true
             int value = 0;
             String numberString = "" + i;
             for (int j = 0; j < numberString.length(); j++)   // loop each char in our numberString

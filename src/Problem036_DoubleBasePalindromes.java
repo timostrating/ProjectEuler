@@ -10,7 +10,7 @@ public class Problem036_DoubleBasePalindromes {  // used c#
         BigInteger value;
 
 
-        for(int i=1; i<SIZE; i++) {
+        for(int i=1; i < SIZE; i++) {
             System.out.println(Integer.toString(i, 2));
         }
 

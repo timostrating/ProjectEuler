@@ -20,19 +20,19 @@ public class Problem040_ChampernowneConstant {
         }
 
         ans *= Character.getNumericValue( sb.charAt(0) );
-        System.out.println(sb.charAt(0));
+            System.out.println(sb.charAt(0));
         ans *= Character.getNumericValue( sb.charAt(10-1) );
-        System.out.println(sb.charAt(10-1));
+            System.out.println(sb.charAt(10-1));
         ans *= Character.getNumericValue( sb.charAt(100-1) );
-        System.out.println(sb.charAt(100-1));
+            System.out.println(sb.charAt(100-1));
         ans *= Character.getNumericValue( sb.charAt(1000-1) );
-        System.out.println(sb.charAt(1000-1));
+            System.out.println(sb.charAt(1000-1));
         ans *= Character.getNumericValue( sb.charAt(10000-1) );
-        System.out.println(sb.charAt(10000-1));
+            System.out.println(sb.charAt(10000-1));
         ans *= Character.getNumericValue( sb.charAt(100000-1) );
-        System.out.println(sb.charAt(100000-1));
+            System.out.println(sb.charAt(100000-1));
 //        ans *= Character.getNumericValue( sb.charAt(1000000) );
 
-        System.out.println("ans = " + ans);  // 210 * 1 = 2010
+            System.out.println("ans = " + ans);  // 210 * 1 = 2010
     }
 }

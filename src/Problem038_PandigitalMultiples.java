@@ -6,7 +6,7 @@ public class Problem038_PandigitalMultiples extends Problem {
         int maxPandigital  = 987654321;
         int ans  = 0;
 
-        for(int i=1; i<9999; i++) {  // we must take the concatenating of the sums   we know  maxLength = 9     We also must let the while loop minimally loop twice
+        for(int i=1; i < 9999; i++) {  // we must take the concatenating of the sums   we know  maxLength = 9     We also must let the while loop minimally loop twice
             String text = "";
             int j = 1;
             while (text.length() < 9){

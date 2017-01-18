@@ -9,15 +9,15 @@ public class Problem046_GoldbachOtherConjecture extends Problem{
         boolean flag = false;
 
         ArrayList<Integer> map = new ArrayList<>();
-        for(int i=1; i<100; i++) {
+        for(int i=1; i < 100; i++) {
             map.add(2 * (int)Math.pow(i, 2));
         }
 
-        for(int i=9; i<SIZE; i++) {
+        for(int i=9; i < SIZE; i++) {
             if(i % 2 == 1 && isPrime(i) == false) {
 //                System.out.println("i = " + i);
 
-                for(int j=i-1; j>0; j--) {
+                for(int j=i-1; j > 0; j--) {
                     if (isPrime(j)) {
                         if(map.contains(i-j)) {
                             System.out.println("i = "+i+"   j = "+j+"    ==  "+(i-j));

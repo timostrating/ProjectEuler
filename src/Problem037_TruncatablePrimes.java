@@ -15,14 +15,14 @@ public class Problem037_TruncatablePrimes extends Problem{
                 map.add(i);
         }
 
-        for (int i=map.size()-1; i>1; i--) {
+        for (int i=map.size()-1; i > 1; i--) {
             String text = ""+map.get(i);
             boolean flag = false;
 
             if(text.length() <= 1)
                 break;
 
-            for (int j=1; j<text.length(); j++) {           //   ----->
+            for (int j=1; j < text.length(); j++) {           //   ----->
                 String shortText = text.substring(j, text.length());
                 int value = Integer.parseInt(shortText);
 //                System.out.println(" -"+shortText+"- "+value);

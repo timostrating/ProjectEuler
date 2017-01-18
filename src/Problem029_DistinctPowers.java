@@ -16,7 +16,7 @@ public class Problem029_DistinctPowers {
                 curVal = new BigInteger(""+a).pow(b);
 
                 if (map.contains( curVal )) {
-                    System.out.println( "DAMN" );
+                    System.out.println( " * Map already contains this value * " );
                 } else {
                     map.add( curVal );
                     System.out.println(curVal);
