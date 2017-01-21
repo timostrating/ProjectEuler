@@ -8,7 +8,6 @@ public class Problem096_SuDoku {  // TODO: Problem096_SuDoku
     final static int SIZE = 9;
 
 
-
     public void run() {
         int[][] data = new int[][]{
             {0,0,3, 0,2,0, 6,0,0},
@@ -23,52 +22,42 @@ public class Problem096_SuDoku {  // TODO: Problem096_SuDoku
             {8,0,0, 2,0,3, 0,0,9},
             {0,0,5, 0,1,0, 3,0,0}
         };
-        SudokuTile[][] tiles = new SudokuTile[SIZE][SIZE];
-
         Sudoku sudoku = new Sudoku(data);
+        sudoku.debug();
 
         System.out.println("ans = ");
     }
 
 
-    class SudokuTile {
-        public SudokuTile (int value) {
-
-        }
-    }
-
-
     class Sudoku {
 
-        int[][][] data = new int[SIZE][SIZE][SIZE];  // 3d array   x, y, possible numbers
+        int[][] data = new int[SIZE][SIZE];  // 3d array   x, y, number
 
         public Sudoku(int[][] map) {
             for (int x=0; x < SIZE; x++) {  // LOOP x
                 for (int y = 0; y < SIZE; y++) {  // LOOP y
-
-                    if (map[x][y] == 0) {
-                        for (int i = 0; i < SIZE; i++) {  // LOOP possible numbers
-
-                        }
-                    }
+                    data[x][y] = map[x][y];
                 }
             }
         }
-    }
 
+        public void debug() {
+            for (int x=0; x < SIZE; x++) {  // LOOP x
+                for (int y=0; y < SIZE; y++){  // LOOP y
+                    System.out.print(data[x][y]+" ");
 
-    private void debugSudoku(Sudoku sudoku) {
-        for (int x=0; x < SIZE; x++) {  // LOOP x
-            for (int y=0; y < SIZE; y++){  // LOOP y
-                System.out.print(sudoku.data[x][y]+" ");
-                if(y % 3 == 2)
-                    System.out.print(" ");
-            }
-            System.out.println("");
-            if(x % 3 == 2)
+                    if(y % 3 == 2)
+                        System.out.print(" ");
+                }
                 System.out.println("");
+                if(x % 3 == 2)
+                    System.out.println("");
+            }
         }
-        System.out.println("");
+
+        public int[] getListOfPosibleNumbers() {
+            return new int[] {0,1,2};
+        }
     }
 }
 
