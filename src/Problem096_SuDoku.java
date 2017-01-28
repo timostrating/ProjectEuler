@@ -1,66 +1,115 @@
+import com.sun.javafx.geom.Vec2d;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * Created by Sneeuwpopsneeuw on 10-Aug-16.
  */
-public class Problem096_SuDoku {  // TODO: Problem096_SuDoku
+public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
     public static void main(String[] args) {
         new Problem096_SuDoku().run();
     }
     final static int SIZE = 9;
 
 
+
     public void run() {
-        int[][] data = new int[][]{
-            {0,0,3, 0,2,0, 6,0,0},
-            {9,0,0, 3,0,5, 0,0,1},
-            {0,0,1, 8,0,6, 4,0,0},
+        String[] input = {"003020600900305001001806400008102900700000008006708200002609500800203009005010300" };
 
-            {0,0,8, 1,0,2, 9,0,0},
-            {7,0,0, 0,0,0, 0,0,8},
-            {0,0,6, 7,0,8, 2,0,0},
+        Sudoku sudoku = new Sudoku();
+        sudoku.show();
 
-            {0,0,2, 6,0,9, 5,0,0},
-            {8,0,0, 2,0,3, 0,0,9},
-            {0,0,5, 0,1,0, 3,0,0}
-        };
-        Sudoku sudoku = new Sudoku(data);
-        sudoku.debug();
+        for (String str : input)
+            for (int j = 0; j < str.length(); j++)
+                if (str.charAt(j) != '0')
+                    sudoku.registerValue(j % SIZE, j / SIZE, Character.getNumericValue(str.charAt(j)));
+
 
         System.out.println("ans = ");
     }
 
 
     class Sudoku {
+//        int[][] data = new int[SIZE][SIZE];
+        Map<Vec2d, GridItem> map = new HashMap<Vec2d, GridItem>();
 
-        int[][] data = new int[SIZE][SIZE];  // 3d array   x, y, number
-
-        public Sudoku(int[][] map) {
+        public Sudoku() {
             for (int x=0; x < SIZE; x++) {  // LOOP x
-                for (int y = 0; y < SIZE; y++) {  // LOOP y
-                    data[x][y] = map[x][y];
+                for (int y=0; y < SIZE; y++) {  // LOOP y
+                    map.put(new Vec2d(x,y), new GridItem());
                 }
             }
         }
 
-        public void debug() {
+        public void show() {
+            System.out.println("_SHOW_");
             for (int x=0; x < SIZE; x++) {  // LOOP x
-                for (int y=0; y < SIZE; y++){  // LOOP y
-                    System.out.print(data[x][y]+" ");
+                for (int y=0; y < SIZE; y++)  // LOOP y
+                    System.out.print( map.get(new Vec2d(x,y)).value + ((y % 3 == 2)? "  " : " "));
 
-                    if(y % 3 == 2)
-                        System.out.print(" ");
-                }
-                System.out.println("");
                 if(x % 3 == 2)
                     System.out.println("");
+
+                System.out.println("");
+            }
+        }
+        public void debug() {
+            System.out.println("_DEBUG_");
+            for (int x=0; x < SIZE; x++) {  // LOOP x
+                for (int y=0; y < SIZE; y++) {  // LOOP y
+                    GridItem gridItem = map.get(new Vec2d(x, y));
+                    System.out.print("("+gridItem.value+") ");
+
+                    for (int n=0; n <= 9; n++)
+                        System.out.print((gridItem.possibleValues.contains(n))? gridItem.possibleValues.get( gridItem.possibleValues.indexOf( new Integer(n) )) : "_");
+
+                    System.out.print((y % 3 == 2) ? "    " : "  ");
+                }
+
+                if(x % 3 == 2)
+                    System.out.println("");
+
+                System.out.println("");
             }
         }
 
-        public int[] getListOfPosibleNumbers() {
-            return new int[] {0,1,2};
+        public void registerValue(int x, int y, int value) {
+            map.get( new Vec2d(x,y)).value = value;
+            map.get( new Vec2d(x,y)).possibleValues.clear();
+            informRow(y, value);
+            informCol(x, value);
+        }
+        private void informRow(int y, int value) {
+            for (int x=0; x < SIZE; x++) {
+                GridItem gridItem = map.get(new Vec2d(x,y));
+                if (gridItem.possibleValues.contains(value))
+                    gridItem.possibleValues.remove( new Integer(value));
+            }
+        }
+        private void informCol(int x, int value) {
+            for (int y=0; y < SIZE; y++) {
+                GridItem gridItem = map.get(new Vec2d(x,y));
+                if (gridItem.possibleValues.contains(value))
+                    gridItem.possibleValues.remove( new Integer(value));
+            }
+        }
+    }
+
+
+    class GridItem {
+        public List<Integer> possibleValues = new ArrayList<>();
+        public int value = 0;
+
+        public GridItem() {
+            possibleValues = new ArrayList<>();
+            for (int k=1; k <= SIZE; k++)
+                possibleValues.add(k);
         }
     }
 }
-
 
 
 
