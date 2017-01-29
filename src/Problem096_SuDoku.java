@@ -17,15 +17,68 @@ public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
 
 
     public void run() {
-        String[] input = {"003020600900305001001806400008102900700000008006708200002609500800203009005010300" };
+        String[] input = {
+                "003020600900305001001806400008102900700000008006708200002609500800203009005010300",
+                "200080300060070084030500209000105408000000000402706000301007040720040060004010003",
+                "000000907000420180000705026100904000050000040000507009920108000034059000507000000",
+                "030050040008010500460000012070502080000603000040109030250000098001020600080060020",
+                "020810740700003100090002805009040087400208003160030200302700060005600008076051090",
+                "100920000524010000000000070050008102000000000402700090060000000000030945000071006",
+                "043080250600000000000001094900004070000608000010200003820500000000000005034090710",
+                "480006902002008001900370060840010200003704100001060049020085007700900600609200018",
+                "000900002050123400030000160908000000070000090000000205091000050007439020400007000",
+                "001900003900700160030005007050000009004302600200000070600100030042007006500006800",
+                "000125400008400000420800000030000095060902010510000060000003049000007200001298000",
+                "062340750100005600570000040000094800400000006005830000030000091006400007059083260",
+                "300000000005009000200504000020000700160000058704310600000890100000067080000005437",
+                "630000000000500008005674000000020000003401020000000345000007004080300902947100080",
+                "000020040008035000000070602031046970200000000000501203049000730000000010800004000",
+                "361025900080960010400000057008000471000603000259000800740000005020018060005470329",
+                "050807020600010090702540006070020301504000908103080070900076205060090003080103040",
+                "080005000000003457000070809060400903007010500408007020901020000842300000000100080",
+                "003502900000040000106000305900251008070408030800763001308000104000020000005104800",
+                "000000000009805100051907420290401065000000000140508093026709580005103600000000000",
+                "020030090000907000900208005004806500607000208003102900800605007000309000030020050",
+                "005000006070009020000500107804150000000803000000092805907006000030400010200000600",
+                "040000050001943600009000300600050002103000506800020007005000200002436700030000040",
+                "004000000000030002390700080400009001209801307600200008010008053900040000000000800",
+                "360020089000361000000000000803000602400603007607000108000000000000418000970030014",
+                "500400060009000800640020000000001008208000501700500000000090084003000600060003002",
+                "007256400400000005010030060000508000008060200000107000030070090200000004006312700",
+                "000000000079050180800000007007306800450708096003502700700000005016030420000000000",
+                "030000080009000500007509200700105008020090030900402001004207100002000800070000090",
+                "200170603050000100000006079000040700000801000009050000310400000005000060906037002",
+                "000000080800701040040020030374000900000030000005000321010060050050802006080000000",
+                "000000085000210009960080100500800016000000000890006007009070052300054000480000000",
+                "608070502050608070002000300500090006040302050800050003005000200010704090409060701",
+                "050010040107000602000905000208030501040070020901080406000401000304000709020060010",
+                "053000790009753400100000002090080010000907000080030070500000003007641200061000940",
+                "006080300049070250000405000600317004007000800100826009000702000075040190003090600",
+                "005080700700204005320000084060105040008000500070803010450000091600508007003010600",
+                "000900800128006400070800060800430007500000009600079008090004010003600284001007000",
+                "000080000270000054095000810009806400020403060006905100017000620460000038000090000",
+                "000602000400050001085010620038206710000000000019407350026040530900020007000809000",
+                "000900002050123400030000160908000000070000090000000205091000050007439020400007000",
+                "380000000000400785009020300060090000800302009000040070001070500495006000000000092",
+                "000158000002060800030000040027030510000000000046080790050000080004070100000325000",
+                "010500200900001000002008030500030007008000500600080004040100700000700006003004050",
+                "080000040000469000400000007005904600070608030008502100900000005000781000060000010",
+                "904200007010000000000706500000800090020904060040002000001607000000000030300005702",
+                "000700800006000031040002000024070000010030080000060290000800070860000500002006000",
+                "001007090590080001030000080000005800050060020004100000080000030100020079020700400",
+                "000003017015009008060000000100007000009000200000500004000000020500600340340200000",
+                "300200000000107000706030500070009080900020004010800050009040301000702000000008006"
+        };
 
-        Sudoku sudoku = new Sudoku();
-        sudoku.show();
 
-        for (String str : input)
+        for (String str : input) {
+            Sudoku sudoku = new Sudoku();
             for (int j = 0; j < str.length(); j++)
                 if (str.charAt(j) != '0')
-                    sudoku.registerValue(j % SIZE, j / SIZE, Character.getNumericValue(str.charAt(j)));
+                    sudoku.registerValue(j / SIZE, j % SIZE, Character.getNumericValue(str.charAt(j)));
+
+            sudoku.solve();
+        }
 
 
         System.out.println("ans = ");
@@ -35,6 +88,7 @@ public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
     class Sudoku {
 //        int[][] data = new int[SIZE][SIZE];
         Map<Vec2d, GridItem> map = new HashMap<Vec2d, GridItem>();
+        int discoverdItems = 0;
 
         public Sudoku() {
             for (int x=0; x < SIZE; x++) {  // LOOP x
@@ -43,6 +97,75 @@ public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
                 }
             }
         }
+
+        public void solve() {
+            while (discoverdItems < SIZE * SIZE) {
+                fireOnePossibleCellChecks();
+                show();
+                debug();
+                fireOnePossibleGridChecks();
+                show();
+                debug();
+
+                mistakeCheck();
+            }
+            show();
+        }
+
+        private void fireOnePossibleCellChecks() {
+            for (int x = 0; x < SIZE; x++) {  // LOOP x
+                for (int y = 0; y < SIZE; y++) {  // LOOP y
+                    if (map.get(new Vec2d(x, y)).possibleValues.size() == 1) {
+                        int value = map.get(new Vec2d(x, y)).possibleValues.get(0);
+                        registerValue(x, y, value);
+                    }
+                }
+            }
+        }
+
+        private void fireOnePossibleGridChecks() {
+            for (int x = 0; x < SIZE; x++) {  // LOOP x
+                for (int y = 0; y < SIZE; y++) {  // LOOP y
+                    GridItem gridItem = map.get(new Vec2d(x,y));
+
+                    for (int n=0; n < gridItem.possibleValues.size(); n++) {
+                        int encounters = 0;
+                        int xStart = (x / 3) * 3;     // you should not write code like this
+                        int yStart = (y / 3) * 3;     // It is cleaner when you just use the Math Class
+
+                        for (int i = xStart; i < xStart + 3; i++) {  // LOOP x
+                            for (int j = yStart; j < yStart + 3; j++) {  // LOOP y
+                                if (map.get(new Vec2d(i,j)).possibleValues.contains( gridItem.possibleValues.get(n) ))
+                                    encounters ++;
+                            }
+                        }
+
+                        if (encounters == 1) {
+//                            throw new Error(x + " " + y + " " + gridItem.possibleValues.get(n));
+                            registerValue(x, y, gridItem.possibleValues.get(n));
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        private void mistakeCheck() {
+            for (int x = 0; x < SIZE; x++) {  // LOOP x
+                for (int y = 0; y < SIZE; y++) {  // LOOP y
+                    if (map.get(new Vec2d(x, y)).possibleValues.size() == 0) {
+                        if (map.get(new Vec2d(x, y)).value == 0) {
+                            System.err.print("YOU MADE A MISTAKE");
+                            debug();
+                            throw new Error("");
+                        }
+                    }
+                }
+            }
+        }
+
+
 
         public void show() {
             System.out.println("_SHOW_");
@@ -63,7 +186,7 @@ public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
                     GridItem gridItem = map.get(new Vec2d(x, y));
                     System.out.print("("+gridItem.value+") ");
 
-                    for (int n=0; n <= 9; n++)
+                    for (int n=1; n <= SIZE; n++)
                         System.out.print((gridItem.possibleValues.contains(n))? gridItem.possibleValues.get( gridItem.possibleValues.indexOf( new Integer(n) )) : "_");
 
                     System.out.print((y % 3 == 2) ? "    " : "  ");
@@ -77,10 +200,31 @@ public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
         }
 
         public void registerValue(int x, int y, int value) {
-            map.get( new Vec2d(x,y)).value = value;
-            map.get( new Vec2d(x,y)).possibleValues.clear();
+            if (isValidValue(x, y, value) == false)
+                throw new Error("WRONG");
+
+            discoverdItems ++;
+            informCell(x, y, value);
+            informGrid(x, y, value);
             informRow(y, value);
             informCol(x, value);
+        }
+        private void informCell(int x, int y, int value) {
+            map.get( new Vec2d(x,y)).value = value;
+            map.get( new Vec2d(x,y)).possibleValues.clear();
+        }
+        private void informGrid(int x, int y, int value) {
+            int xStart = (x/3) * 3;     // you should not write code like this
+            int yStart = (y/3) * 3;     // It is cleaner when you just use the Math Class
+
+            for (int i=xStart; i < xStart+3; i++) {  // LOOP x
+                for (int j = yStart; j < yStart + 3; j++) {  // LOOP y
+                    GridItem gridItem = map.get(new Vec2d(i,j));
+                    if (gridItem.possibleValues.contains(value))
+                        gridItem.possibleValues.remove(new Integer(value));
+                }
+            }
+
         }
         private void informRow(int y, int value) {
             for (int x=0; x < SIZE; x++) {
@@ -96,8 +240,32 @@ public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
                     gridItem.possibleValues.remove( new Integer(value));
             }
         }
-    }
 
+
+        private boolean isValidValue(int x, int y, int value) {
+            if (map.get(new Vec2d(x, y)).value != 0)
+                return false;
+
+            for (int y2 = 0; y2 < SIZE; y2++)   // LOOP y
+                if (map.get(new Vec2d(x, y2)).value == value)
+                    return false;
+
+            for (int x2 = 0; x2 < SIZE; x2++)   // LOOP x
+                if (map.get(new Vec2d(x2, y)).value == value)
+                    return false;
+
+            int xStart = (x/3) * 3;     // you should not write code like this
+            int yStart = (y/3) * 3;     // It is cleaner when you just use the Math Class
+
+            for (int i=xStart; i < xStart+3; i++)   // LOOP x
+                for (int j=yStart; j < yStart+3; j++)   // LOOP y
+                    if (map.get(new Vec2d(i, j)).value == value)
+                        return false;
+
+
+            return true;
+        }
+    }
 
     class GridItem {
         public List<Integer> possibleValues = new ArrayList<>();
@@ -113,510 +281,95 @@ public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
 
 
 
-
-
-
 /*
 
-Grid 01
-003020600
-900305001
-001806400
-008102900
-700000008
-006708200
-002609500
-800203009
-005010300
-Grid 02
-200080300
-060070084
-030500209
-000105408
-000000000
-402706000
-301007040
-720040060
-004010003
-Grid 03
-000000907
-000420180
-000705026
-100904000
-050000040
-000507009
-920108000
-034059000
-507000000
-Grid 04
-030050040
-008010500
-460000012
-070502080
-000603000
-040109030
-250000098
-001020600
-080060020
-Grid 05
-020810740
-700003100
-090002805
-009040087
-400208003
-160030200
-302700060
-005600008
-076051090
-Grid 06
-100920000
-524010000
-000000070
-050008102
-000000000
-402700090
-060000000
-000030945
-000071006
-Grid 07
-043080250
-600000000
-000001094
-900004070
-000608000
-010200003
-820500000
-000000005
-034090710
-Grid 08
-480006902
-002008001
-900370060
-840010200
-003704100
-001060049
-020085007
-700900600
-609200018
-Grid 09
-000900002
-050123400
-030000160
-908000000
-070000090
-000000205
-091000050
-007439020
-400007000
-Grid 10
-001900003
-900700160
-030005007
-050000009
-004302600
-200000070
-600100030
-042007006
-500006800
-Grid 11
-000125400
-008400000
-420800000
-030000095
-060902010
-510000060
-000003049
-000007200
-001298000
-Grid 12
-062340750
-100005600
-570000040
-000094800
-400000006
-005830000
-030000091
-006400007
-059083260
-Grid 13
-300000000
-005009000
-200504000
-020000700
-160000058
-704310600
-000890100
-000067080
-000005437
-Grid 14
-630000000
-000500008
-005674000
-000020000
-003401020
-000000345
-000007004
-080300902
-947100080
-Grid 15
-000020040
-008035000
-000070602
-031046970
-200000000
-000501203
-049000730
-000000010
-800004000
-Grid 16
-361025900
-080960010
-400000057
-008000471
-000603000
-259000800
-740000005
-020018060
-005470329
-Grid 17
-050807020
-600010090
-702540006
-070020301
-504000908
-103080070
-900076205
-060090003
-080103040
-Grid 18
-080005000
-000003457
-000070809
-060400903
-007010500
-408007020
-901020000
-842300000
-000100080
-Grid 19
-003502900
-000040000
-106000305
-900251008
-070408030
-800763001
-308000104
-000020000
-005104800
-Grid 20
-000000000
-009805100
-051907420
-290401065
-000000000
-140508093
-026709580
-005103600
-000000000
-Grid 21
-020030090
-000907000
-900208005
-004806500
-607000208
-003102900
-800605007
-000309000
-030020050
-Grid 22
-005000006
-070009020
-000500107
-804150000
-000803000
-000092805
-907006000
-030400010
-200000600
-Grid 23
-040000050
-001943600
-009000300
-600050002
-103000506
-800020007
-005000200
-002436700
-030000040
-Grid 24
-004000000
-000030002
-390700080
-400009001
-209801307
-600200008
-010008053
-900040000
-000000800
-Grid 25
-360020089
-000361000
-000000000
-803000602
-400603007
-607000108
-000000000
-000418000
-970030014
-Grid 26
-500400060
-009000800
-640020000
-000001008
-208000501
-700500000
-000090084
-003000600
-060003002
-Grid 27
-007256400
-400000005
-010030060
-000508000
-008060200
-000107000
-030070090
-200000004
-006312700
-Grid 28
-000000000
-079050180
-800000007
-007306800
-450708096
-003502700
-700000005
-016030420
-000000000
-Grid 29
-030000080
-009000500
-007509200
-700105008
-020090030
-900402001
-004207100
-002000800
-070000090
-Grid 30
-200170603
-050000100
-000006079
-000040700
-000801000
-009050000
-310400000
-005000060
-906037002
-Grid 31
-000000080
-800701040
-040020030
-374000900
-000030000
-005000321
-010060050
-050802006
-080000000
-Grid 32
-000000085
-000210009
-960080100
-500800016
-000000000
-890006007
-009070052
-300054000
-480000000
-Grid 33
-608070502
-050608070
-002000300
-500090006
-040302050
-800050003
-005000200
-010704090
-409060701
-Grid 34
-050010040
-107000602
-000905000
-208030501
-040070020
-901080406
-000401000
-304000709
-020060010
-Grid 35
-053000790
-009753400
-100000002
-090080010
-000907000
-080030070
-500000003
-007641200
-061000940
-Grid 36
-006080300
-049070250
-000405000
-600317004
-007000800
-100826009
-000702000
-075040190
-003090600
-Grid 37
-005080700
-700204005
-320000084
-060105040
-008000500
-070803010
-450000091
-600508007
-003010600
-Grid 38
-000900800
-128006400
-070800060
-800430007
-500000009
-600079008
-090004010
-003600284
-001007000
-Grid 39
-000080000
-270000054
-095000810
-009806400
-020403060
-006905100
-017000620
-460000038
-000090000
-Grid 40
-000602000
-400050001
-085010620
-038206710
-000000000
-019407350
-026040530
-900020007
-000809000
-Grid 41
-000900002
-050123400
-030000160
-908000000
-070000090
-000000205
-091000050
-007439020
-400007000
-Grid 42
-380000000
-000400785
-009020300
-060090000
-800302009
-000040070
-001070500
-495006000
-000000092
-Grid 43
-000158000
-002060800
-030000040
-027030510
-000000000
-046080790
-050000080
-004070100
-000325000
-Grid 44
-010500200
-900001000
-002008030
-500030007
-008000500
-600080004
-040100700
-000700006
-003004050
-Grid 45
-080000040
-000469000
-400000007
-005904600
-070608030
-008502100
-900000005
-000781000
-060000010
-Grid 46
-904200007
-010000000
-000706500
-000800090
-020904060
-040002000
-001607000
-000000030
-300005702
-Grid 47
-000700800
-006000031
-040002000
-024070000
-010030080
-000060290
-000800070
-860000500
-002006000
-Grid 48
-001007090
-590080001
-030000080
-000005800
-050060020
-004100000
-080000030
-100020079
-020700400
-Grid 49
-000003017
-015009008
-060000000
-100007000
-009000200
-000500004
-000000020
-500600340
-340200000
-Grid 50
-300200000
-000107000
-706030500
-070009080
-900020004
-010800050
-009040301
-000702000
-000008006
+        private void fireDirectionChecks() {
+            fireDirectionChecksRows();
+            fireDirectionChecksCols();
+        }
+
+        private void fireDirectionChecksRows() {
+            for (int y = 0; y < SIZE; y++) {  // LOOP y
+
+                List<Integer> missingValues = new ArrayList<>();
+                for (int k=1; k <= SIZE; k++)
+                    missingValues.add(k);
+
+                for (int x = 0; x < SIZE; x++)
+                    missingValues.remove( new Integer( map.get(new Vec2d(x,y)).value));
+
+                for (int x = 0; x < SIZE; x++) {
+                    GridItem gridItem = map.get(new Vec2d(x, y));
+                    if (gridItem.value == 0) {
+                        for (int j=0; j < missingValues.size(); j++)
+                            if (isValidValue(x, y, missingValues.get(j)))
+                                if (isOnlyWayPosibleInCol(y, missingValues.get(j)))
+                                    registerValue(x, y, missingValues.get(j));
+                    }
+                }
+            }
+        }
+        private boolean isOnlyWayPosibleInRow(int y, int value) {
+            for (int x = 0; x < SIZE; x++) {
+                if (map.get(new Vec2d(x, y)).possibleValues.contains(value))
+                    return false;
+            }
+
+            return true;
+        }
+
+        private void fireDirectionChecksCols() {
+            for (int x = 0; x < SIZE; x++) {  // LOOP X
+
+                List<Integer> missingValues = new ArrayList<>();
+                for (int k=1; k <= SIZE; k++)
+                    missingValues.add(k);
+
+                for (int y = 0; y < SIZE; y++)
+                    missingValues.remove( new Integer( map.get(new Vec2d(x,y)).value));
+
+                for (int y = 0; y < SIZE; y++) {
+                    GridItem gridItem = map.get(new Vec2d(x, y));
+                    if (gridItem.value == 0)
+                        for (int j=0; j < missingValues.size(); j++)
+                            if (isValidValue(x, y, missingValues.get(j)))
+                                if (isOnlyWayPosibleInRow(x, missingValues.get(j)))
+                                    registerValue(x, y, missingValues.get(j));
+                }
+            }
+        }
+        private boolean isOnlyWayPosibleInCol(int x, int value) {
+            for (int y = 0; y < SIZE; y++) {
+                if (map.get(new Vec2d(x, y)).value == value)
+                    return false;
+            }
+
+            return true;
+        }
+
+
+        private boolean isValidValue(int x, int y, int value) {
+            if (map.get(new Vec2d(x, y)).value != 0)
+                return false;
+
+            for (int y2 = 0; y2 < SIZE; y2++)   // LOOP y
+                if (map.get(new Vec2d(x, y2)).value == value)
+                    return false;
+
+            for (int x2 = 0; x2 < SIZE; x2++)   // LOOP x
+                if (map.get(new Vec2d(x2, y)).value == value)
+                    return false;
+
+            int xStart = (x/3) * 3;     // you should not write code like this
+            int yStart = (y/3) * 3;     // It is cleaner when you just use the Math Class
+
+            for (int i=xStart; i < xStart+3; i++)   // LOOP x
+                for (int j=yStart; j < yStart+3; j++)   // LOOP y
+                    if (map.get(new Vec2d(i, j)).value == value)
+                        return false;
+
+
+            return true;
+        }
 
  */
