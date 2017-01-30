@@ -1,9 +1,6 @@
 import com.sun.javafx.geom.Vec2d;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by Sneeuwpopsneeuw on 10-Aug-16.
@@ -13,6 +10,8 @@ public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
         new Problem096_SuDoku().run();
     }
     final static int SIZE = 9;
+    static String output = "";
+    static int outputValue = 0;
 
 
 
@@ -80,13 +79,13 @@ public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
             sudoku.solve();
         }
 
-
-        System.out.println("ans = ");
+        System.out.println(output);
+        System.out.println("");
+        System.out.println(outputValue);
     }
 
 
     class Sudoku {
-//        int[][] data = new int[SIZE][SIZE];
         Map<Vec2d, GridItem> map = new HashMap<Vec2d, GridItem>();
         int discoverdItems = 0;
 
@@ -99,17 +98,33 @@ public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
         }
 
         public void solve() {
+            int i = 0;
             while (discoverdItems < SIZE * SIZE) {
                 fireOnePossibleCellChecks();
-                show();
-                debug();
                 fireOnePossibleGridChecks();
-                show();
-                debug();
 
                 mistakeCheck();
+
+                i++;
+                if (i > 10)
+                    break;
             }
+
             show();
+
+            outputValue += map.get(new Vec2d(0,0)).value;
+            output += " ("+map.get(new Vec2d(0,0)).value + ") ";
+            output += Arrays.toString(map.get(new Vec2d(0,0)).possibleValues.toArray()) + "\n";
+
+            outputValue += map.get(new Vec2d(1,0)).value;
+            output += " ("+map.get(new Vec2d(1,0)).value + ") ";
+            output += Arrays.toString(map.get(new Vec2d(1,0)).possibleValues.toArray()) + "\n";
+
+            outputValue += map.get(new Vec2d(2,0)).value;
+            output += " ("+map.get(new Vec2d(2,0)).value + ") ";
+            output += Arrays.toString(map.get(new Vec2d(2,0)).possibleValues.toArray()) + "\n";
+            output += "\n";
+
         }
 
         private void fireOnePossibleCellChecks() {
@@ -129,20 +144,58 @@ public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
                     GridItem gridItem = map.get(new Vec2d(x,y));
 
                     for (int n=0; n < gridItem.possibleValues.size(); n++) {
-                        int encounters = 0;
+                        List<Vec2d> list = new ArrayList<>();
                         int xStart = (x / 3) * 3;     // you should not write code like this
                         int yStart = (y / 3) * 3;     // It is cleaner when you just use the Math Class
 
                         for (int i = xStart; i < xStart + 3; i++) {  // LOOP x
                             for (int j = yStart; j < yStart + 3; j++) {  // LOOP y
-                                if (map.get(new Vec2d(i,j)).possibleValues.contains( gridItem.possibleValues.get(n) ))
-                                    encounters ++;
+                                if (map.get(new Vec2d(i, j)).possibleValues.contains( gridItem.possibleValues.get(n) ))
+                                    list.add(new Vec2d(i, j));
                             }
                         }
 
-                        if (encounters == 1) {
-//                            throw new Error(x + " " + y + " " + gridItem.possibleValues.get(n));
-                            registerValue(x, y, gridItem.possibleValues.get(n));
+                        int value = gridItem.possibleValues.get(n);
+
+                        switch (list.size()) {
+                            case 1:
+                                registerValue(x, y, value);
+                                break;
+                            case 2:  // not really clean but it works
+                                list.add(new Vec2d(list.get(0).x, list.get(0).y));
+                            case 3:
+                                if (list.get(0).x == list.get(1).x  &&  list.get(1).x == list.get(2).x) {
+                                    System.out.print(" ("+list.get(0).x + " : " + list.get(0).y+") ");
+                                    System.out.print(" ("+list.get(1).x + " : " + list.get(1).y+") ");
+                                    System.out.print(" ("+list.get(2).x + " : " + list.get(2).y+") ");
+                                    System.out.println(" ");
+//                                    debug();
+
+                                    for (int y2=0; y2 < SIZE; y2++) {
+                                        if (y2 != list.get(0).y  &&  y2 != list.get(1).y  &&  y2 != list.get(2).y) {
+                                            GridItem item = map.get(new Vec2d((int) list.get(0).x, y2));
+                                            if (item.possibleValues.contains(value))
+                                                item.possibleValues.remove(new Integer(value));
+                                        }
+                                    }
+                                }
+                                else if (list.get(0).y == list.get(1).y  &&  list.get(1).y == list.get(2).y) {
+                                    System.out.print(" ("+list.get(0).x + " : " + list.get(0).y+") ");
+                                    System.out.print(" ("+list.get(1).x + " : " + list.get(1).y+") ");
+                                    System.out.print(" ("+list.get(2).x + " : " + list.get(2).y+") ");
+                                    System.out.println(" ");
+//                                    debug();
+
+                                    for (int x2=0; x2 < SIZE; x2++) {
+                                        if (x2 != list.get(0).x  &&  x2 != list.get(1).x  &&  x2 != list.get(2).x) {
+                                            GridItem item = map.get(new Vec2d(x2, (int) list.get(0).y));
+                                            if (item.possibleValues.contains(value))
+                                                item.possibleValues.remove(new Integer(value));
+                                        }
+                                    }
+                                }
+
+                                break;
                         }
                     }
 
@@ -150,6 +203,49 @@ public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
             }
 
         }
+
+        private void fireXwingChecks() {
+            fireDirectionChecksRows();
+            fireDirectionChecksCols();
+        }
+
+        private void fireDirectionChecksRows() {
+            System.err.println("___Rows___");
+            show();
+            debug();
+
+            for (int x = 0; x < SIZE; x++) {  // LOOP X
+                List<Integer> missingValues = new ArrayList<>();
+                for (int k=1; k <= SIZE; k++)
+                    missingValues.add(k);
+
+                for (int y = 0; y < SIZE; y++)
+                    missingValues.remove( new Integer( map.get(new Vec2d(x,y)).value));
+
+                System.err.println( Arrays.toString( missingValues.toArray() ) );
+            }
+            System.err.println("/___Rows___");
+        }
+
+        private void fireDirectionChecksCols() {
+            System.err.println("___Cols___");
+            show();
+            debug();
+
+            for (int y = 0; y < SIZE; y++) {  // LOOP y
+                List<Integer> missingValues = new ArrayList<>();
+                for (int k=1; k <= SIZE; k++)
+                    missingValues.add(k);
+
+                for (int x = 0; x < SIZE; x++)
+                    missingValues.remove( new Integer( map.get(new Vec2d(x,y)).value));
+
+                System.err.println( Arrays.toString( missingValues.toArray() ) );
+            }
+            System.err.println("/___Cols___");
+        }
+
+
 
         private void mistakeCheck() {
             for (int x = 0; x < SIZE; x++) {  // LOOP x
@@ -199,9 +295,14 @@ public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
             }
         }
 
+
+
         public void registerValue(int x, int y, int value) {
             if (isValidValue(x, y, value) == false)
                 throw new Error("WRONG");
+
+            System.out.println( " ("+x+", "+y+") = " + value);
+            debug();
 
             discoverdItems ++;
             informCell(x, y, value);
@@ -224,7 +325,6 @@ public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
                         gridItem.possibleValues.remove(new Integer(value));
                 }
             }
-
         }
         private void informRow(int y, int value) {
             for (int x=0; x < SIZE; x++) {
@@ -270,6 +370,8 @@ public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
     class GridItem {
         public List<Integer> possibleValues = new ArrayList<>();
         public int value = 0;
+        public int x;
+        public int y;
 
         public GridItem() {
             possibleValues = new ArrayList<>();
@@ -278,98 +380,3 @@ public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
         }
     }
 }
-
-
-
-/*
-
-        private void fireDirectionChecks() {
-            fireDirectionChecksRows();
-            fireDirectionChecksCols();
-        }
-
-        private void fireDirectionChecksRows() {
-            for (int y = 0; y < SIZE; y++) {  // LOOP y
-
-                List<Integer> missingValues = new ArrayList<>();
-                for (int k=1; k <= SIZE; k++)
-                    missingValues.add(k);
-
-                for (int x = 0; x < SIZE; x++)
-                    missingValues.remove( new Integer( map.get(new Vec2d(x,y)).value));
-
-                for (int x = 0; x < SIZE; x++) {
-                    GridItem gridItem = map.get(new Vec2d(x, y));
-                    if (gridItem.value == 0) {
-                        for (int j=0; j < missingValues.size(); j++)
-                            if (isValidValue(x, y, missingValues.get(j)))
-                                if (isOnlyWayPosibleInCol(y, missingValues.get(j)))
-                                    registerValue(x, y, missingValues.get(j));
-                    }
-                }
-            }
-        }
-        private boolean isOnlyWayPosibleInRow(int y, int value) {
-            for (int x = 0; x < SIZE; x++) {
-                if (map.get(new Vec2d(x, y)).possibleValues.contains(value))
-                    return false;
-            }
-
-            return true;
-        }
-
-        private void fireDirectionChecksCols() {
-            for (int x = 0; x < SIZE; x++) {  // LOOP X
-
-                List<Integer> missingValues = new ArrayList<>();
-                for (int k=1; k <= SIZE; k++)
-                    missingValues.add(k);
-
-                for (int y = 0; y < SIZE; y++)
-                    missingValues.remove( new Integer( map.get(new Vec2d(x,y)).value));
-
-                for (int y = 0; y < SIZE; y++) {
-                    GridItem gridItem = map.get(new Vec2d(x, y));
-                    if (gridItem.value == 0)
-                        for (int j=0; j < missingValues.size(); j++)
-                            if (isValidValue(x, y, missingValues.get(j)))
-                                if (isOnlyWayPosibleInRow(x, missingValues.get(j)))
-                                    registerValue(x, y, missingValues.get(j));
-                }
-            }
-        }
-        private boolean isOnlyWayPosibleInCol(int x, int value) {
-            for (int y = 0; y < SIZE; y++) {
-                if (map.get(new Vec2d(x, y)).value == value)
-                    return false;
-            }
-
-            return true;
-        }
-
-
-        private boolean isValidValue(int x, int y, int value) {
-            if (map.get(new Vec2d(x, y)).value != 0)
-                return false;
-
-            for (int y2 = 0; y2 < SIZE; y2++)   // LOOP y
-                if (map.get(new Vec2d(x, y2)).value == value)
-                    return false;
-
-            for (int x2 = 0; x2 < SIZE; x2++)   // LOOP x
-                if (map.get(new Vec2d(x2, y)).value == value)
-                    return false;
-
-            int xStart = (x/3) * 3;     // you should not write code like this
-            int yStart = (y/3) * 3;     // It is cleaner when you just use the Math Class
-
-            for (int i=xStart; i < xStart+3; i++)   // LOOP x
-                for (int j=yStart; j < yStart+3; j++)   // LOOP y
-                    if (map.get(new Vec2d(i, j)).value == value)
-                        return false;
-
-
-            return true;
-        }
-
- */
