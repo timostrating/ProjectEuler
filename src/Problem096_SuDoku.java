@@ -380,3 +380,4 @@ public class Problem096_SuDoku {  // TODO: Problem0SIZE6_SuDoku
         }
     }
 }
+
