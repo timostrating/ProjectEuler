@@ -4,7 +4,10 @@ import java.math.BigInteger;
  * Created by Sneeuwpopsneeuw on 20-Aug-16.
  */
 public class Problem {
-    public static int factorial(int n) {
+    protected static void print(Object o) { System.out.print(o); }
+    protected static void println(Object o) { System.out.println(o); }
+
+    protected static int factorial(int n) {
         int fact = 1; // this will be the result
         for (int i = 1; i <= n; i++) {
             fact *= i;
@@ -12,7 +15,7 @@ public class Problem {
         return fact;
     }
 
-    public static BigInteger factorial(BigInteger n) {
+    protected static BigInteger factorial(BigInteger n) {
         BigInteger result = BigInteger.ONE;
         while (n.equals(BigInteger.ZERO) == false) {
             result = result.multiply(n);
@@ -42,6 +45,22 @@ public class Problem {
         return(true); // it is prime if we end up here
     }
 
+
+    protected static String concatenate(int a, int b) {
+        return (""+a) + (""+b);
+    }
+
+    protected boolean isPalindrome(int v) { return isPalindrome(""+v); }
+    protected boolean isPalindrome(long v) { return isPalindrome(""+v); }
+    protected boolean isPalindrome(BigInteger v) { return isPalindrome(v.toString()); }
+    protected boolean isPalindrome(String str) {
+        int n = str.length();
+        for( int i = 0; i < (n/2); i++ )
+            if (str.charAt(i) != str.charAt(n - i - 1))
+                return false;
+
+        return true;
+    }
 
 
     protected static int amoutOfDividors(int number){
