@@ -1,7 +1,25 @@
 /**
  * Created by Sneeuwpopsneeuw on 07-Sep-16.
  */
-public class Problem357_PrimeGeneratingIntegers {  // TODO: Problem357_PrimeGeneratingIntegers
+public class Problem357_PrimeGeneratingIntegers extends Problem{  // TODO: Problem357_PrimeGeneratingIntegers
+    public static void main(String[] args) { new Problem357_PrimeGeneratingIntegers().start(); }
+    private void start() {
+        long counter = 0;
+        for (int i=0; i < 100_000_000; i++)
+            if (isEveryDivisorPrime(i))
+                counter += i;
+
+        println(counter);
+    }
+
+    private boolean isEveryDivisorPrime(int num) {
+        for (int i = 1; i <= num / 2; i++)
+            if (num % i == 0)
+                if (isPrime(i + num / i) == false)
+                    return false;
+
+        return true;
+    }
 }
 
 
