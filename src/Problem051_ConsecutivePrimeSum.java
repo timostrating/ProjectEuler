@@ -4,30 +4,23 @@ import java.util.Arrays;
 /**
  * Created by Sneeuwpopsneeuw on 20-Aug-16.
  */
-public class Problem051_ConsecutivePrimeSum extends Problem{  // TODO: Problem051_ConsecutivePrimeSum
+public class Problem051_ConsecutivePrimeSum extends Problem {
     public static void main(String[] args) { new Problem051_ConsecutivePrimeSum().start(); }
     private void start() {
-
         for (int index=0; true; index ++) {
             String str = "" + index;
 
-            for (int i = 0; i < str.length(); i++) {
+            for (int i=0; i < str.length(); i++)
                 check(str, i);
-            }
 
-            for (int i = 0; i < str.length() - 1; i++) {
-                for (int j = i + 1; j < str.length(); j++) {
+            for (int i=0; i < str.length() - 1; i++)
+                for (int j=i+1; j < str.length(); j++)
                     check(str, i, j);
-                }
-            }
 
-            for (int i = 0; i < str.length() - 2; i++) {
-                for (int j = i + 1; j < str.length() - 1; j++) {
-                    for (int k = j + 1; k < str.length(); k++) {
+            for (int i=0; i < str.length() - 2; i++)
+                for (int j=i+1; j < str.length() - 1; j++)
+                    for (int k=j+1; k < str.length(); k++)
                         check(str, i, j, k);
-                    }
-                }
-            }
         }
     }
 
@@ -35,10 +28,9 @@ public class Problem051_ConsecutivePrimeSum extends Problem{  // TODO: Problem05
         ArrayList<Integer> oldNumbers = new ArrayList<>();
         char[] array = str.toCharArray();
 
-        for (char ch = '0'; ch <= '9'; ch++) {
-            for (int i : indexes) {
+        for (char ch='0'; ch <= '9'; ch++) {  // its nice that we can do this in java
+            for (int i : indexes)
                 array[i] = ch;
-            }
 
             int number = Integer.parseInt(String.valueOf(array));
             if (isPrime(number))
@@ -56,10 +48,9 @@ public class Problem051_ConsecutivePrimeSum extends Problem{  // TODO: Problem05
 
     private boolean arrayElementsSameStringLengh( int[] array ) {
         int length = String.valueOf(array[0]).length();
-        for (int i=1; i < array.length; i++) {
+        for (int i=1; i < array.length; i++)
             if (String.valueOf(array[i]).length() != length)
                 return false;
-        }
 
         return true;
     }
