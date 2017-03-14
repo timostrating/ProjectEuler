@@ -5,7 +5,7 @@ public class Problem357_PrimeGeneratingIntegers extends Problem{  // TODO: Probl
     public static void main(String[] args) { new Problem357_PrimeGeneratingIntegers().start(); }
     private void start() {
         long counter = 0;
-        for (int i=0; i < 100_000_000; i++)
+        for (int i=0; i <= 100_000_000; i++)
             if (isEveryDivisorPrime(i))
                 counter += i;
 
@@ -13,9 +13,9 @@ public class Problem357_PrimeGeneratingIntegers extends Problem{  // TODO: Probl
     }
 
     private boolean isEveryDivisorPrime(int num) {
-        for (int i = 1; i <= num / 2; i++)
+        for (int i = 1; i <= Math.sqrt(num); i++)
             if (num % i == 0)
-                if (isPrime(i + num / i) == false)
+                if (isPrime(i + num / i) == false  &&  isPrime((num/i) + num / (num/i)) == false)   // d+30/d is prime
                     return false;
 
         return true;
