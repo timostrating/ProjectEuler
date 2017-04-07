@@ -5,6 +5,12 @@ The problems can be found here:  https://projecteuler.net/archives
 
 ![alt tag](https://raw.githubusercontent.com/timostrating/ProjectEuler/master/ProjectEuler-Dashboard.png)
 
-#my account 
+## my account 
 https://projecteuler.net/profile/timostrating.png
 Friend key: 924117_C8a0Xl0x2HKYpESCRXxMrgUxMNG6wq41
+
+## TODO
+[ ] solve first 100 problems with java
+[ ] solve first 20 with javascript, ruby and python
+[ ] create a table of solved problems / languages used
+[ ] add better explenations in the code
