@@ -10,7 +10,8 @@ https://projecteuler.net/profile/timostrating.png
 Friend key: 924117_C8a0Xl0x2HKYpESCRXxMrgUxMNG6wq41
 
 ## TODO
-[ ] solve first 100 problems with java
-[ ] solve first 20 with javascript, ruby and python
-[ ] create a table of solved problems / languages used
-[ ] add better explenations in the code
+- [ ] solve first 100 problems with java
+- [ ] solve first 20 with javascript, ruby and python
+- [ ] create a table of solved problems / languages used
+- [ ] add better comments / explenations in the code
+- [ ] I still should finish advent of code
