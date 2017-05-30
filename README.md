@@ -5,7 +5,7 @@ The problems can be found here:  https://projecteuler.net/archives
 
 | | Java | Ruby | C |
 |:---:|:-:|:-:|:-:|
-| 1   | x | x |   |
+| 1   | x | x | x |
 | 2   | x | x |   |
 | 3   | x | x |   |
 | 4   | x | x |   |
