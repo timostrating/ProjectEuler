@@ -10,8 +10,8 @@ The problems can be found here:  https://projecteuler.net/archives
 | 3   | x | x |   |
 | 4   | x | x |   |
 | 5   | x |   |   |
-| 6   | x |   |   |
-| 7   | x |   |   |
+| 6   | x | x |   |
+| 7   | x | x |   |
 | 8   | x |   |   |
 | 9   | x |   |   |
 | 10  | x |   |   |
