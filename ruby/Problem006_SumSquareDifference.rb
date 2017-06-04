@@ -1,8 +1,5 @@
-num = 0;  100.times { |i| num += (i+1)**2 }
-num2 = 0; 100.times { |i| num2 += (i+1) }
-puts "#{num2**2} - #{num} = #{(num2**2)-num}"
-
-
+a=b=0; 100.times{|i|a+=(i+1)**2;b+=(i+1)}
+puts "#{b**2} - #{a} = #{(b**2)-a}"
 
 
 # The sum of the squares of the first ten natural numbers is,
