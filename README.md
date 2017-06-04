@@ -12,9 +12,9 @@ The problems can be found here:  https://projecteuler.net/archives
 | 5   | x |   |   |
 | 6   | x | x |   |
 | 7   | x | x |   |
-| 8   | x |   |   |
-| 9   | x |   |   |
-| 10  | x |   |   |
+| 8   | x | x |   |
+| 9   | x | x |   |
+| 10  | x | x |   |
 | 11  | x |   |   |
 | 12  | x |   |   |
 | 13  | x |   |   |
