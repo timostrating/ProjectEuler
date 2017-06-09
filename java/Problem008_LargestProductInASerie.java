@@ -27,21 +27,22 @@ public class Problem008_LargestProductInASerie {
     };
 
     public static void main (String args[]) {
-        long ansCur = 1;
-        long ansHighest = 0;
+        long ansCur = 1;                    // current answer
+        long ansHighest = 0;                // highest answer encountered
 
-
-        for(int i=0; i<(rij.length-13); i++) {
-            for(int j=0; j<13; j++) {
+        for(int i=0; i < (rij.length-13); i++) {
+            for(int j=0; j < 13; j++)
                 ansCur *= rij[i+j];
-            }
-            if (ansCur > ansHighest) {
+
+            if (ansCur > ansHighest)
                 ansHighest = ansCur;
-            }
+
             System.out.println(ansCur);
             ansCur = 1;
         }
-        System.out.println("");
-        System.out.println(ansHighest);
+        System.out.println("\n"+ansHighest);
     }
 }
+
+
+//  Find the greatest product of five consecutive digits in the 1000-digit number.
