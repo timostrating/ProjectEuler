@@ -1,83 +1,105 @@
 require 'prime'
 
-class Integer
-  def !
-    (1..self).inject(:*)
-  end
+def combinations(items)
+  return [] unless items.any?
+  prefix = items[0]
+  suffixes = combinations(items[1..-1])
+  [[prefix]] + suffixes + suffixes.map {|item| [prefix] + item }
 end
 
-MAX = 30
+MAX = 1_000_000
 ans = 0
+x = 0
+start = Time.now
 
 (2..MAX).each do |i|
   total = 0
   minus = 0
-  map = i.prime_division.map(&:first)
+  map =  i.prime_division.map(&:first)
+  com = combinations(map)
 
-  (0...map.length).each do |j|
-    total += i / map[j]
-    # puts "#{i} / #{map[j]} = #{i/map[j]}"
-
-    ((j+1)...map.length).each do |k|
-      minus += i / (map[j] * map[k])
-      # puts "\t\t #{i} / (#{map[j]} * #{map[k]}) = #{i / (map[j] * map[k])}"
+  (0...com.length).each do |j|           # [2], [3], [5], [2,3], [3,5], [3,5], [2,3,5]
+    if map.length > j 
+      total += (i / map[j]) -1
+      # puts "(#{i} / #{map[j]}) -1 = #{(i/map[j]) -1}"
+    else 
+      value = 1
+      ((0)...com[j].length).each do |k|
+        value *= com[j][k]
+      end
+      minus = (com[j].length % 2 == 0)? minus + ((i / value) -1) : minus - ((i / value) -1)
+      # puts "\t\t (#{i} / (#{value})) -1 = #{(i / value) -1}"
     end
   end
 
-  minus += 1
-
   puts "\t\t\t\t#{i}:  #{total} - #{minus} = #{total-minus}"
   ans += total - minus
-end
-
-x = 0
-(2..MAX).each do |i|
   x += (i-1)
 end
 
-puts "x = #{x}  ans = #{ans}    #{x-ans}"
+finish = Time.now
+puts "x = #{x}  ans = #{ans}    #{x-ans}     in #{finish - start} seconds"
 
 
 
+  # (0...map.length).each do |j|
+  #   total += (i / map[j]) -1
+  #   # puts "#{i} / #{map[j]} = #{(i/map[j]) -1}"
 
+  #   ((j+1)...map.length).each do |k|
+  #     minus += (i / (map[j] * map[k]) -1)
+  #     # puts "\t\t (#{i} / (#{map[j]} * #{map[k]})) -1 = #{(i / (map[j] * map[k])) -1}"
+  #   end
+  # end
+
+#   1/  2x  3/  4x  5/  6x  7x  8x  9/ 10x 11/ 12x 13/ 14x 15/ 16x 17/ 18x 19/ 20x 21x 22x 23/ 24x 25/ 26x 27/ 28x
+#        2       2       2       2       2       2       2       2       2       2       2       2       2       2
+#                            7                           7                           7                           7 
 # 
-# 12   2 3
-# /2 = 6
-# /3 = 4  10 - 2*1 - overlappingen(1) = 7
-# 
-# 
-# 60   2 3 5
-# /2 = 30
-# /3 = 20
-# /5 = 12  62 - 3*1 - _?_overlappingen_?_ = 43
-# 
-# 2*3 = 6    10
-# 2*5 = 10   6
-# 
-# 3*5 = 15   4
-# 
-# 
-# 210  2 3 5 7  30 42 70 105
-# /2 = 105
-# /3 = 70
-# /5 = 42
-# /7 = 30        247 - _?_overlappingen_?_ = 161
-# 
-# 2*3 = 6    35
-# 2*5 = 10   21
-# 2*7 = 14   15
-# 
-# 3*5 = 15   14
-# 3*7 = 21   10 
-# 
-# 5*7 = 35   6
+#
+# 28             2 7
+# /2 -1 = 13
+# /7 -1 = 3
+#         ____+
+#         16          16 - 1 = 15
+#
+# 28 / (2*7) -1 = 1
 # 
 # 
 # 
+# 30             2 3 5
+# /2 -1 = 14
+# /3 -1 = 9
+# /5 -1 = 5
+#         ____+
+#         28           28 - 7 = 21
+# 
+# 30 / (2*3) -1 = 4
+# 30 / (2*5) -1 = 2
+# 30 / (3*5) -1 = 1
 # 
 # 
 # 
-#         
+#     1/ 2x  3x  4x  5x  6x  7/  8x  9x 10x 11/ 12x 13/ 14x 15x 16x 17/ 18x 19/ 20x 21x 22x 23/ 24x 25x 26x 27x 28x 29/ 30x 31/ 32x 33x 34x 35x 36x 37/ 38x 39x 40x 41/ 42x 43/ 44x 45x 46x 47/ 48x 49/ 50x 51x 52x 53/ 54x 55x 56x 57x 58x 59/ 60x         
+#         2       2       2       2       2       2       2       2       2       2       2       2       2       2       2       2       2       2       2       2       2       2       2       2       2       2       2       2       2       2
+#             3           _           3           _           3           _           3           _           3           _           3           _           3           _           3           _           3           _           3           3
+#                     5                   _                   _                   _                   5                   __                   5                   _                   _                   _                   5                   5
+#
+# 
+# 60
+# /2 -1 = 29
+# /3 -1 = 19
+# /5 -1 = 11
+#         ____+
+#         59           59 - 18 = 41
+# 
+# 60 / (2*3) -1 = _
+# 60 / (2*5) -1 = _
+# 60 / (3*5) -1 = 3
+# 60 / (2*3*5) -1 = 1   <---- TODO
+# 
+# 
+# 
 #                                                                                                        
 #                                                                                                 1/2     1
 #                                                                                           1/3   2/3     3
@@ -144,44 +166,37 @@ puts "x = #{x}  ans = #{ans}    #{x-ans}"
 
 # MAX = 210
 
-def ex(i, j)
-  map = i.prime_division.map(&:first)
-  (0...map.length).each do |n|
-    if (j % map[n] == 0)
-      return "x"
-    end
-  end
-
-  return "/"
-end
-
-
-text = ""
-
-(1..MAX).each do |i|
-  (2..i).each do |n|
-    text << "          "
-  end
-  ((i+1)..MAX).each do |j| 
-    t = "#{i}#{ex(i,j)}#{j}"
-    while t.length < 10
-      t = " "+t
-    end
-    text << t
-  end
-  text << "\n"
-end
-
-
-File.open("tmp.rb", 'w') { |file| file.write(text) }
-puts text
 
 
 
+# def ex(i, j)
+#   map = i.prime_division.map(&:first)
+#   (0...map.length).each do |n|
+#     if (j % map[n] == 0)
+#       return "x"
+#     end
+#   end
 
+#   return "/"
+# end
 
+# text = ""
+# (1..MAX).each do |i|
+#   (2..i).each do |n|
+#     text << "          "
+#   end
+#   ((i+1)..MAX).each do |j| 
+#     t = "#{i}#{ex(i,j)}#{j}"
+#     while t.length < 10
+#       t = " "+t
+#     end
+#     text << t
+#   end
+#   text << "\n"
+# end
 
-
+# File.open("tmp.rb", 'w') { |file| file.write(text) }
+# puts text
 
 
 
