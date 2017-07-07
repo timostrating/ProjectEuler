@@ -28,7 +28,7 @@ The problems can be found here:  https://projecteuler.net/archives
 | 18  | x |   |   |
 | 19  | x |   |   |
 | 20  | x | x |   |
-| ... | x |   |   |
+| ... | x | x |   |
 
 ![alt tag](https://raw.githubusercontent.com/timostrating/ProjectEuler/master/ProjectEuler-Dashboard.png)
 
