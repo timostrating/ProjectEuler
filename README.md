@@ -18,8 +18,8 @@ The problems can be found here:  https://projecteuler.net/archives
 | 8   | x | x |   |
 | 9   | x | x |   |
 | 10  | x | x |   |
-| 11  | x |   |   |
-| 12  | x |   |   |
+| 11  | x | X |   |
+| 12  | x | X |   |
 | 13  | x |   |   |
 | 14  | x |   |   |
 | 15  | x |   |   |
