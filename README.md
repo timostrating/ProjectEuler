@@ -18,8 +18,8 @@ The problems can be found here:  https://projecteuler.net/archives
 | 8   | x | x |   |
 | 9   | x | x |   |
 | 10  | x | x |   |
-| 11  | x | X |   |
-| 12  | x | X |   |
+| 11  | x | x |   |
+| 12  | x | x |   |
 | 13  | x |   |   |
 | 14  | x |   |   |
 | 15  | x |   |   |
@@ -28,7 +28,7 @@ The problems can be found here:  https://projecteuler.net/archives
 | 18  | x |   |   |
 | 19  | x |   |   |
 | 20  | x | x |   |
-| ... | x |   |   |
+| ... | x | x |   |
 
 ![alt tag](https://raw.githubusercontent.com/timostrating/ProjectEuler/master/ProjectEuler-Dashboard.png)
 
