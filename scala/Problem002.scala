@@ -7,13 +7,13 @@ object Problem002 extends App {
     case _ => fib( n-1 ) + fib( n-2 )
   }
 
-  var out, i = 0
-  var value = fib(i)
+  var out, i, value = 0
 
-  while(fib(i) < 4000000) {
-    if (fib(i) % 2 == 0)
-      out += fib(i)
+  while(value < 4000000) {
+    if (value % 2 == 0)
+      out += value
     i += 1
+    value = fib(i)
   }
 
   println(out)
