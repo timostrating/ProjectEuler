@@ -55,7 +55,7 @@ end
 
 
 
-MAX = 10_000_000
+MAX = 900_000_000
 # ans = 0
 x = 0
 
@@ -130,3 +130,6 @@ end
 # In fact, d = 12 is the smallest denominator having a resilience R(d) < 4/10 .
 
 # Find the smallest denominator d, having a resilience R(d) < 15499/94744 .
+
+
+0 -> 154124122 checked
