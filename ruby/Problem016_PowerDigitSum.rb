@@ -1,0 +1,1 @@
+t=0;(0..((2**1000).to_s.length)).to_a.each{|i|t+=((2**1000).to_s)[i].to_i};puts t
