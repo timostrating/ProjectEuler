@@ -36,3 +36,6 @@ The problems can be found here:  https://projecteuler.net/archives
 https://projecteuler.net/profile/timostrating.png
 Friend key: 924117_C8a0Xl0x2HKYpESCRXxMrgUxMNG6wq41
 
+## TODO 
+- [ ] Functional programming
+- [ ] Benchmarks
