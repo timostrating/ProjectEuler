@@ -23,7 +23,7 @@ The problems can be found here:  https://projecteuler.net/archives
 | 13  | x | x |   |   |   |   |
 | 14  | x | x |   |   |   |   |
 | 15  | x |   |   |   |   |   |
-| 16  | x |   |   |   |   |   |
+| 16  | x | x |   |   |   |   |
 | 17  | x |   |   |   |   |   |
 | 18  | x |   |   |   |   |   |
 | 19  | x |   |   |   |   |   |
@@ -36,3 +36,6 @@ The problems can be found here:  https://projecteuler.net/archives
 https://projecteuler.net/profile/timostrating.png
 Friend key: 924117_C8a0Xl0x2HKYpESCRXxMrgUxMNG6wq41
 
+## TODO 
+- [ ] Functional programming
+- [ ] Benchmarks
