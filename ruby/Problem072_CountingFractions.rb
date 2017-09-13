@@ -41,7 +41,6 @@ finish = Time.now
 puts "x = #{x}  ans = #{ans}    #{x-ans}     in #{finish - start} seconds"
 
 
-
   # (0...map.length).each do |j|
   #   total += (i / map[j]) -1
   #   # puts "#{i} / #{map[j]} = #{(i/map[j]) -1}"

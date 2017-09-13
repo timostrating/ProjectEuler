@@ -5,7 +5,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Problem072 {
+class Problem072 {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
         new Problem072().start();
