@@ -13,7 +13,7 @@ The problems can be found here:  https://projecteuler.net/archives
 | 3   | x | x |   |   |   |   |   |
 | 4   | x | x |   |   | x |   | x |
 | 5   | _ | x |   |   |   |   |   |
-| 6   | x | x |   |   |   |   |   |
+| 6   | x | x |   |   |   |   | x |
 | 7   | x | x |   |   |   |   |   |
 | 8   | x | x |   |   |   |   |   |
 | 9   | x | x |   |   |   |   |   |
