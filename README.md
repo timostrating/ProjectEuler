@@ -17,7 +17,7 @@ The problems can be found here:  https://projecteuler.net/archives
 | 7   | x | x |   |   |   |   |   |
 | 8   | x | x |   |   |   |   |   |
 | 9   | x | x |   |   |   |   |   |
-| 10  | x | x |   |   |   |   |   |
+| 10  | x | x |   | x |   |   |   |
 | 11  | x | x |   |   |   |   |   |
 | 12  | x | x |   |   |   |   |   |
 | 13  | x | x |   |   |   |   |   |
