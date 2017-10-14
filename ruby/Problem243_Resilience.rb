@@ -52,14 +52,9 @@ end
 
 # puts "\n\n\n\n"
 
+LOWEST = [[0, 100]]
 
-
-
-MAX = 900_000_000
-# ans = 0
-x = 0
-
-(5..MAX).each do |i|
+def R(i)
 	total = 0
 	minus = 0
 	map =  i.prime_division.map(&:first)
@@ -70,34 +65,49 @@ x = 0
 			total += (i / map[j]) -1
 			# puts "(#{i} / #{map[j]}) -1 = #{(i/map[j]) -1}"
 		else 
-		value = 1
-		((0)...com[j].length).each do |k|
-			value *= com[j][k]
-		end
+			value = 1
+			((0)...com[j].length).each do |k|
+				value *= com[j][k]
+			end
 			minus = (com[j].length % 2 == 0)? minus + ((i / value) -1) : minus - ((i / value) -1)
 			# puts "\t\t (#{i} / (#{value})) -1 = #{(i / value) -1}"
 		end
 	end
 
 	# puts "\t\t\t\t#{i}:  #{total} - #{minus} = #{total-minus}"
-	# ans += total - minus
-	# puts Rational(i - (total - minus) - 1, i -1)
-	x += (i-1)
 
 	n = i - (total - minus) - 1
 	d = i -1
 
+	percentage = 100 / d.to_f * n
+	if LOWEST.last.last > percentage
+		LOWEST << [i, percentage]
+	end
 
-	if Rational(n, d) < Rational(15499, 94744)
+	return Rational(n, d)
+end
+
+
+MAX = 900_000_000
+d = 0
+while d < MAX
+	d += 2 * 3 * 5 * 7 * 11 * 13 * 17
+	if R(d) < Rational(15499, 94744)
+	# puts R(d)
+
+	# if d > 1_000_00
 		puts "----------------------------------"
-		puts "#{i} _ #{Rational(n, d)}"
+		puts "#{LOWEST}"
 		puts "----------------------------------\n\n"
 		return
 	else
-		puts "#{i} _ #{Rational(n, d)}"
+		puts "nope"
 	end
 end
 
+
+
+# 6, 12, 18, 24, 30, 60, 90, 120, 150, 180, 210, 420, 630, 840, 1050, 1260, 1470, 1680, 1890, 2100, 2310, 4620, 6930, 9240, 11550, 13860, 16170, 18480, 20790, 23100, 25410, 27720, 30030, 60060, 90090, 
 
 
 #                                                                                                 1/2
@@ -130,6 +140,3 @@ end
 # In fact, d = 12 is the smallest denominator having a resilience R(d) < 4/10 .
 
 # Find the smallest denominator d, having a resilience R(d) < 15499/94744 .
-
-
-0 -> 154124122 checked
