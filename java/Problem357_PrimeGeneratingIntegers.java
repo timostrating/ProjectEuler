@@ -1,7 +1,7 @@
 /**
  * Created by Sneeuwpopsneeuw on 07-Sep-16.
  */
-public class Problem357_PrimeGeneratingIntegers extends Problem{  // TODO: Problem357_PrimeGeneratingIntegers
+public class Problem357_PrimeGeneratingIntegers extends Problem {
     public static void main(String[] args) { new Problem357_PrimeGeneratingIntegers().start(); }
     private void start() {
         long counter = 0;

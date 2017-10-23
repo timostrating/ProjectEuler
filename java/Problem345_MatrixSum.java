@@ -1,7 +1,7 @@
 /**
  * Created by Sneeuwpopsneeuw on 02-Jan-17.
  */
-public class Problem345_MatrixSum {  // TODO: Problem345_MatrixSum
+public class Problem345_MatrixSum { 
     public static void main(String[] args) {
         int[][] map = {
                 { 7  ,  53, 183, 439, 863, 497, 383, 563,  79, 973, 287,  63, 343, 169, 583 },

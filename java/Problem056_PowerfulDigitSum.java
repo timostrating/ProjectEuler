@@ -3,7 +3,7 @@ import java.math.BigInteger;
 /**
  * Created by Sneeuwpopsneeuw on 26-Aug-16.
  */
-public class Problem056_PowerfulDigitSum extends Problem {  // TODO: Problem056_PowerfulDigitSum
+public class Problem056_PowerfulDigitSum extends Problem {
     public static void main(String[] args) {
         final int SIZE = 100;
         long ans = 0;
