@@ -13,7 +13,7 @@ The problems can be found here:  https://projecteuler.net/archives
 | 2   | x | x |   | x | x |   |   |   |   |
 | 3   | x | x |   |   |   |   |   |   |   |
 | 4   | x | x |   |   | x |   | x |   |   |
-| 5   | _ | x |   |   |   |   |   |   |   |
+| 5   |   | x |   |   |   |   |   |   |   |
 | 6   | x | x |   | x |   |   | x |   |   |
 | 7   | x | x |   |   |   |   |   |   |   |
 | 8   | x | x |   |   |   |   |   |   |   |
@@ -21,14 +21,14 @@ The problems can be found here:  https://projecteuler.net/archives
 | 10  | x | x |   | x |   |   |   |   |   |
 | 11  | x | x |   |   |   |   |   |   |   |
 | 12  | x | x |   |   |   |   |   |   |   |
-| 13  | x | x |   |   |   |   |   |   |   |
+| 13  |   | x |   |   |   |   |   |   |   |
 | 14  | x | x |   |   |   |   |   |   |   |
 | 15  | x |   |   |   |   |   |   |   |   |
 | 16  | x | x |   |   |   |   |   |   |   |
 | 17  | x |   |   |   |   |   |   |   |   |
 | 18  | x |   |   |   |   |   |   |   |   |
 | 19  | x |   |   |   |   |   |   |   |   |
-| 20  | x | x |   |   |   |   |   |   |   |
+| 20  | x | x |   | x |   |   |   |   |   |
 | ... | x | x |   |   |   |   |   |   |   |
 
 ![alt tag](https://raw.githubusercontent.com/timostrating/ProjectEuler/master/ProjectEuler-Dashboard.png)
