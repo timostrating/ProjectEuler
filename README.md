@@ -10,8 +10,8 @@ The problems can be found here:  https://projecteuler.net/archives
 | | Java | Ruby | C | Lisp (Scheme) | Scala | Haskell | PHP | Bash | PL/SQL |
 |:---:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | 1   | x | x | x | x | x | x | x | x | x |
-| 2   | x | x |   | x | x |   |   |   |   |
-| 3   | x | x |   |   |   |   |   |   |   |
+| 2   | x | x |   | x | x |   |   |   | x |
+| 3   | x | x |   |   |   |   |   |   | x |
 | 4   | x | x |   |   | x |   | x |   |   |
 | 5   |   | x |   |   |   |   |   |   |   |
 | 6   | x | x |   | x |   |   | x |   |   |
