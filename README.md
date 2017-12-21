@@ -1,7 +1,7 @@
 ![Timo Strating project euler](https://projecteuler.net/profile/timostrating.png)
 
 # ProjectEuler
-It is nearly a 2 years ago sinds i started woking on Problems from Project Euler.
+It is nearly a 2,5 years ago sinds i started woking on Problems from Project Euler.
 As a proof I have uploaded all my java code to github back then.
 Sinds then I have tried many diferent languages.
 The problems can be found here:  https://projecteuler.net/archives
