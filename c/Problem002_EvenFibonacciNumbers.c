@@ -12,9 +12,8 @@ int main(void) {
     b = a + b;
     a = tmp;
 
-    if(b % 2 == 0) {
+    if(b % 2 == 0)
       sum += b;
-    }
   }
 
   printf("%lu \n", sum);
