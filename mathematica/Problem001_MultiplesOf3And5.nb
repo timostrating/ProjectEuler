@@ -1,0 +1,110 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframEngine 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       160,          7]
+NotebookDataLength[      3104,        100]
+NotebookOptionsPosition[      2691,         80]
+NotebookOutlinePosition[      3029,         95]
+CellTagsIndexPosition[      2986,         92]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Sum", "[", 
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Mod", "[", 
+         RowBox[{"i", ",", "5"}], "]"}], " ", "\[Equal]", " ", "0"}], " ", "||",
+        " ", 
+       RowBox[{
+        RowBox[{"Mod", "[", 
+         RowBox[{"i", ",", "3"}], "]"}], " ", "\[Equal]", " ", "0"}]}], ",", 
+      " ", "i", ",", " ", "0"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", " ", "1", ",", " ", "999"}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.723648107684636*^9, 3.723648142241528*^9}, {
+  3.7236482323924828`*^9, 3.7236483084072943`*^9}, {3.723648392351818*^9, 
+  3.723648482960979*^9}, {3.723650864803138*^9, 3.723650908551207*^9}, {
+  3.723650962953034*^9, 3.7236511871325417`*^9}, {3.7236566402546577`*^9, 
+  3.723656652338522*^9}, {3.723658237030528*^9, 3.7236582751090097`*^9}, {
+  3.723658307825809*^9, 3.723658337946636*^9}, {3.723658505142385*^9, 
+  3.7236585982155657`*^9}}],
+
+Cell[BoxData["233168"], "Output",
+ CellChangeTimes->{{3.723651010071231*^9, 3.723651091488166*^9}, {
+   3.723651129520447*^9, 3.723651187730851*^9}, {3.723658265561193*^9, 
+   3.723658278557658*^9}, 3.723658329051474*^9, {3.7236585064804153`*^9, 
+   3.723658598930505*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", "[", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"Range", "[", "999", "]"}], ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Mod", "[", 
+        RowBox[{"#", ",", "5"}], "]"}], "\[Equal]", "0"}], " ", "||", 
+      RowBox[{
+       RowBox[{"Mod", "[", 
+        RowBox[{"#", ",", "3"}], "]"}], "\[Equal]", "0"}]}], "&"}]}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.72365834528484*^9, 3.7236584066174507`*^9}, {
+  3.723658483933181*^9, 3.723658496243516*^9}, {3.723658683493552*^9, 
+  3.723658716195011*^9}, {3.723658801296514*^9, 3.723658824495901*^9}, {
+  3.72365887014958*^9, 3.7236591473226833`*^9}}],
+
+Cell[BoxData["233168"], "Output",
+ CellChangeTimes->{{3.723659076336175*^9, 3.7236591478500957`*^9}}]
+}, Open  ]]
+},
+WindowSize->{989, 776},
+WindowMargins->{{334, Automatic}, {Automatic, 99}},
+FrontEndVersion->"11.0 for Linux ARM (32-bit) (January 17, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[582, 22, 1013, 24, 56, "Input"],
+Cell[1598, 48, 273, 4, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1908, 57, 663, 17, 34, "Input"],
+Cell[2574, 76, 101, 1, 32, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
