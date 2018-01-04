@@ -1,0 +1,147 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[      4236,        146]
+NotebookOptionsPosition[      3309,        107]
+NotebookOutlinePosition[      3646,        122]
+CellTagsIndexPosition[      3603,        119]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  UnderoverscriptBox["\[Sum]", 
+   RowBox[{"i", "=", "0"}], "5"], 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"Fibonacci", "[", "i", "]"}], " ", "+", " ", 
+    RowBox[{"Print", "[", 
+     RowBox[{"Fibonacci", "[", "i", "]"}], "]"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.7240656370384283`*^9, 3.724065707013563*^9}, {
+  3.724065787742085*^9, 3.7240658037344437`*^9}, {3.724065837517036*^9, 
+  3.724065901261457*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["0"], "Print",
+ CellChangeTimes->{{3.724065887406155*^9, 3.72406590220119*^9}}],
+
+Cell[BoxData["1"], "Print",
+ CellChangeTimes->{{3.724065887406155*^9, 3.72406590220442*^9}}],
+
+Cell[BoxData["1"], "Print",
+ CellChangeTimes->{{3.724065887406155*^9, 3.724065902207412*^9}}],
+
+Cell[BoxData["2"], "Print",
+ CellChangeTimes->{{3.724065887406155*^9, 3.7240659022100782`*^9}}],
+
+Cell[BoxData["3"], "Print",
+ CellChangeTimes->{{3.724065887406155*^9, 3.724065902212789*^9}}],
+
+Cell[BoxData["5"], "Print",
+ CellChangeTimes->{{3.724065887406155*^9, 3.724065902215519*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"12", "+", 
+  RowBox[{"6", " ", "Null"}]}]], "Output",
+ CellChangeTimes->{{3.724065887439052*^9, 3.724065902218705*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Select", "[", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Fibonacci", "[", "n", "]"}], ",", " ", "n", ",", " ", 
+        "45"}]}]}], "}"}], "]"}], ",", " ", 
+   RowBox[{
+    RowBox[{"#", " ", "<", " ", "4000000"}], "&"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.724066290018755*^9, {3.72406644854714*^9, 3.7240664498107653`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "1", ",", "2", ",", "3", ",", "5", ",", "8", ",", "13", ",", "21",
+    ",", "34", ",", "55", ",", "89", ",", "144", ",", "233", ",", "377", ",", 
+   "610", ",", "987", ",", "1597", ",", "2584", ",", "4181", ",", "6765", ",",
+    "10946", ",", "17711", ",", "28657", ",", "46368", ",", "75025", ",", 
+   "121393", ",", "196418", ",", "317811", ",", "514229", ",", "832040", ",", 
+   "1346269", ",", "2178309", ",", "3524578"}], "}"}]], "Output",
+ CellChangeTimes->{3.7240662249326468`*^9, 3.7240662910769377`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", "[", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"Select", "[", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Fibonacci", "[", "n", "]"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"n", ",", " ", "45"}], "}"}]}], "]"}], ",", " ", 
+      RowBox[{
+       RowBox[{"#", " ", "<", " ", "4000000"}], "&"}]}], "]"}], ",", " ", 
+    "EvenQ"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.724070676069664*^9, {3.7240711233482*^9, 3.724071126854021*^9}}],
+
+Cell[BoxData["4613732"], "Output",
+ CellChangeTimes->{3.7240711278775063`*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 897},
+WindowMargins->{{96, Automatic}, {67, Automatic}},
+FrontEndVersion->"11.0 for Linux ARM (32-bit) (January 17, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[422, 15, 442, 11, 65, "Input"],
+Cell[CellGroupData[{
+Cell[889, 30, 92, 1, 24, "Print"],
+Cell[984, 33, 92, 1, 24, "Print"],
+Cell[1079, 36, 93, 1, 24, "Print"],
+Cell[1175, 39, 95, 1, 24, "Print"],
+Cell[1273, 42, 93, 1, 24, "Print"],
+Cell[1369, 45, 93, 1, 24, "Print"]
+}, Open  ]],
+Cell[1477, 49, 143, 3, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1657, 57, 425, 13, 34, "Input"],
+Cell[2085, 72, 564, 9, 80, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2686, 86, 526, 15, 34, "Input"],
+Cell[3215, 103, 78, 1, 32, "Output"]
+}, Open  ]]
+}
+]
+*)
+
