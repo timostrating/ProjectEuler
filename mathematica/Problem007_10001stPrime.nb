@@ -1,0 +1,60 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframEngine 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       160,          7]
+NotebookDataLength[      1522,         52]
+NotebookOptionsPosition[      1222,         36]
+NotebookOutlinePosition[      1560,         51]
+CellTagsIndexPosition[      1517,         48]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Prime", "[", "10001", "]"}]], "Input",
+ CellChangeTimes->{{3.724069240580471*^9, 3.724069249500901*^9}, {
+   3.724069293398987*^9, 3.724069293647169*^9}, {3.7240695119594584`*^9, 
+   3.724069550192865*^9}, {3.724069798008157*^9, 3.724069802388322*^9}, {
+   3.724069844538351*^9, 3.724069850773178*^9}, {3.724069962266532*^9, 
+   3.724069962890259*^9}, {3.724070307350498*^9, 3.7240703129340687`*^9}, 
+   3.72407034624544*^9, {3.724070569427717*^9, 3.724070572892013*^9}, {
+   3.724178730264453*^9, 3.724178731461307*^9}}],
+
+Cell[BoxData["104743"], "Print",
+ CellChangeTimes->{3.7240705783175917`*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 897},
+WindowMargins->{{Automatic, 506}, {36, Automatic}},
+FrontEndVersion->"11.0 for Linux ARM (32-bit) (January 17, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[582, 22, 545, 8, 32, "Input"],
+Cell[1130, 32, 76, 1, 24, "Print"]
+}, Open  ]]
+}
+]
+*)
+

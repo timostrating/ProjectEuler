@@ -1,0 +1,1 @@
+Print[Prime[10001]]
