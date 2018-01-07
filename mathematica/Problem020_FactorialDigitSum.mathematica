@@ -1,0 +1,1 @@
+Print[Total[IntegerDigits[100!]]]

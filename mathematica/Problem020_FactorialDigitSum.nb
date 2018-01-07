@@ -1,0 +1,63 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframEngine 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       160,          7]
+NotebookDataLength[      1411,         53]
+NotebookOptionsPosition[      1110,         37]
+NotebookOutlinePosition[      1448,         52]
+CellTagsIndexPosition[      1405,         49]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Total", "[", 
+  RowBox[{"IntegerDigits", "[", 
+   RowBox[{"100", "!"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.724259039822421*^9, 3.724259054482168*^9}, {
+  3.7242591313395653`*^9, 3.7242592207152977`*^9}, {3.7242593573394613`*^9, 
+  3.724259382428514*^9}},
+ FormatType->"InputForm"],
+
+Cell[BoxData["648"], "Output",
+ CellChangeTimes->{{3.724259120448105*^9, 3.724259137252017*^9}, 
+   3.724259173857664*^9, {3.724259207537264*^9, 3.724259221295451*^9}, 
+   3.724259357888977*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 897},
+WindowMargins->{{Automatic, 554}, {Automatic, 67}},
+FrontEndVersion->"11.0 for Linux ARM (32-bit) (January 17, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[582, 22, 315, 7, 32, "Input"],
+Cell[900, 31, 194, 3, 32, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
