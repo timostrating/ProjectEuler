@@ -10,12 +10,12 @@ The problems can be found here:  https://projecteuler.net/archives
 |       | Java | Ruby | C   | Lisp (Scheme) | Scala | Haskell | PHP | Bash | PL/SQL | Mathematica |
 | :---: | :-:  | :-:  | :-: | :-:           | :-:   | :-:     | :-: | :-:  | :-:    | :-:         |
 |     1 | x    | x    | x   | x             | x     | x       | x   | x    | x      | x           |
-|     2 | x    | x    | x   | x             | x     |         |     |      | x      |             |
-|     3 | x    | x    | x   |               |       |         |     |      | x      |             |
+|     2 | x    | x    | x   | x             | x     |         |     |      | x      | x           |
+|     3 | x    | x    | x   |               |       |         |     |      | x      | x           |
 |     4 | x    | x    |     |               | x     |         | x   |      |        |             |
 |     5 |      | x    |     |               |       |         |     |      |        |             |
 |     6 | x    | x    |     | x             |       |         | x   |      |        |             |
-|     7 | x    | x    |     |               |       |         |     |      |        |             |
+|     7 | x    | x    |     |               |       |         |     |      |        | x           |
 |     8 | x    | x    |     |               |       |         |     |      |        |             |
 |     9 | x    | x    |     |               |       |         |     |      |        |             |
 |    10 | x    | x    |     | x             |       |         |     |      |        |             |
@@ -28,7 +28,7 @@ The problems can be found here:  https://projecteuler.net/archives
 |    17 | x    |      |     |               |       |         |     |      |        |             |
 |    18 | x    |      |     |               |       |         |     |      |        |             |
 |    19 | x    |      |     |               |       |         |     |      |        |             |
-|    20 | x    | x    |     | x             |       |         |     |      |        |             |
+|    20 | x    | x    |     | x             |       |         |     |      |        | x           |
 |   ... | x    | x    |     |               |       |         |     |      |        |             |
 
 ![alt tag](https://raw.githubusercontent.com/timostrating/ProjectEuler/master/ProjectEuler-Dashboard.png)

@@ -1,0 +1,1 @@
+Print[Total[Select[Select[Table[Fibonacci[n], {n, 45}], # < 4000000 &], EvenQ]]]
