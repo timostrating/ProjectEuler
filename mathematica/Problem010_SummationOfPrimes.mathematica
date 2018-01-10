@@ -1,0 +1,1 @@
+Print[Sum[Prime[i], {i, 1, PrimePi[2000000]}]]
