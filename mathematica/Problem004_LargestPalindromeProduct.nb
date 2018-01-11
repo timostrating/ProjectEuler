@@ -1,0 +1,132 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframEngine 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       160,          7]
+NotebookDataLength[      4157,        124]
+NotebookOptionsPosition[      3661,        102]
+NotebookOutlinePosition[      3999,        117]
+CellTagsIndexPosition[      3956,        114]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Max", "[", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"First", "[", "#", "]"}], "*", 
+        RowBox[{"Last", "[", "#", "]"}]}], "&"}], ",", 
+      RowBox[{"Subsets", "[", 
+       RowBox[{
+        RowBox[{"Range", "[", 
+         RowBox[{"900", ",", " ", "999"}], "]"}], ",", " ", 
+        RowBox[{"{", "2", "}"}]}], "]"}]}], "]"}], ",", " ", 
+    RowBox[{
+     RowBox[{"PalindromeQ", "[", "#", "]"}], " ", "&"}]}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.724698773545011*^9, 3.7246987967595367`*^9}, {
+  3.724698867552458*^9, 3.724698892769504*^9}, {3.724698994396171*^9, 
+  3.724698996461306*^9}, {3.724699036470953*^9, 3.724699142238415*^9}, {
+  3.724699186375712*^9, 3.724699187722777*^9}, {3.724699223759324*^9, 
+  3.724699261158482*^9}, {3.724699342973312*^9, 3.724699348460085*^9}, {
+  3.724699490859275*^9, 3.724699594608165*^9}, {3.724699630425775*^9, 
+  3.724699806241118*^9}, {3.7246998468399*^9, 3.7246998527185287`*^9}, {
+  3.7246998860034857`*^9, 3.7246998901457777`*^9}, {3.724700012568697*^9, 
+  3.72470003400146*^9}, {3.724700137181573*^9, 3.724700138218213*^9}, {
+  3.724700748946909*^9, 3.724700781419538*^9}}],
+
+Cell[BoxData["906609"], "Output",
+ CellChangeTimes->{{3.7246997038912897`*^9, 3.724699726453347*^9}, {
+   3.724699770466558*^9, 3.7246997760354424`*^9}, 3.724699806980966*^9, {
+   3.724699848266205*^9, 3.724699853701845*^9}, 3.724699890882105*^9, {
+   3.724700029319317*^9, 3.724700034810186*^9}, {3.724700765270458*^9, 
+   3.724700782302092*^9}, 3.7247008882908707`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Max", "[", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"First", "[", "#", "]"}], "*", 
+        RowBox[{"Last", "[", "#", "]"}]}], "&"}], ",", 
+      RowBox[{"Append", "[", 
+       RowBox[{
+        RowBox[{"Subsets", "[", 
+         RowBox[{
+          RowBox[{"Range", "[", 
+           RowBox[{"900", ",", " ", "999"}], "]"}], ",", " ", 
+          RowBox[{"{", "2", "}"}]}], "]"}], ",", " ", 
+        RowBox[{"Range", "[", 
+         RowBox[{"900", ",", " ", "999"}], "]"}]}], "]"}]}], "]"}], ",", " ", 
+    
+    RowBox[{
+     RowBox[{"PalindromeQ", "[", "#", "]"}], " ", "&"}]}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.724700143447845*^9, 3.7247002399494877`*^9}, {
+   3.724700358404916*^9, 3.72470036060373*^9}, {3.724700597728438*^9, 
+   3.724700641509479*^9}, {3.7247007132285852`*^9, 3.724700720728177*^9}, {
+   3.724700803959902*^9, 3.724700862558845*^9}, 3.724700948999548*^9}],
+
+Cell[BoxData["906609"], "Output",
+ CellChangeTimes->{{3.724700795505945*^9, 3.7247008092486353`*^9}, {
+  3.724700890821167*^9, 3.724700895832876*^9}}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.72470079077909*^9, 3.724700790783287*^9}}],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.724700418208849*^9, {3.72470065297994*^9, 3.724700659801262*^9}, 
+   3.7247007881247177`*^9}]
+},
+WindowSize->{808, 897},
+WindowMargins->{{Automatic, 546}, {63, Automatic}},
+FrontEndVersion->"11.0 for Linux ARM (32-bit) (January 17, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[582, 22, 1243, 27, 56, "Input"],
+Cell[1828, 51, 371, 5, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2236, 61, 996, 26, 79, "Input"],
+Cell[3235, 89, 150, 2, 32, "Output"]
+}, Open  ]],
+Cell[3400, 94, 91, 1, 32, InheritFromParent],
+Cell[3494, 97, 163, 3, 55, "Input"]
+}
+]
+*)
+
