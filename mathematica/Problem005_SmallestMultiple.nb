@@ -1,0 +1,89 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframEngine 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       160,          7]
+NotebookDataLength[      2226,         79]
+NotebookOptionsPosition[      1817,         59]
+NotebookOutlinePosition[      2155,         74]
+CellTagsIndexPosition[      2112,         71]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Apply", "[", 
+  RowBox[{"LCM", ",", 
+   RowBox[{"Range", "[", "20", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.72470126887074*^9, 3.724701332723477*^9}, {
+  3.72470140367493*^9, 3.7247014492782583`*^9}, {3.724701485855014*^9, 
+  3.7247015146576357`*^9}, {3.724701652825665*^9, 3.724701658826054*^9}, {
+  3.724701723397444*^9, 3.724701778092865*^9}}],
+
+Cell[BoxData["232792560"], "Output",
+ CellChangeTimes->{{3.724701282179175*^9, 3.7247013336011*^9}, 
+   3.724701411987649*^9, 3.724701567719881*^9, {3.724701752879381*^9, 
+   3.7247017861007023`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"LCM", "[", 
+  RowBox[{"Row", "[", 
+   RowBox[{
+    RowBox[{"Range", "[", "20", "]"}], ",", "\"\<,\>\""}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.724701427031155*^9, 3.724701445980077*^9}, {
+  3.72470180189601*^9, 3.724701821666677*^9}}],
+
+Cell[BoxData[
+ RowBox[{"LCM", "[", 
+  TemplateBox[{
+   ",","\",\"","1","2","3","4","5","6","7","8","9","10","11","12","13","14",
+    "15","16","17","18","19","20"},
+   "RowWithSeparators"], "]"}]], "Output",
+ CellChangeTimes->{
+  3.724701329867034*^9, {3.724701427631886*^9, 3.7247014296634903`*^9}, 
+   3.7247018221205797`*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{Automatic, 554}, {55, Automatic}},
+FrontEndVersion->"11.0 for Linux ARM (32-bit) (January 17, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[582, 22, 378, 7, 34, "Input"],
+Cell[963, 31, 200, 3, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1200, 39, 270, 7, 34, "Input"],
+Cell[1473, 48, 328, 8, 34, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
