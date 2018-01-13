@@ -7,28 +7,28 @@ Sinds then I have tried many diferent languages.
 The problems can be found here:  https://projecteuler.net/archives
 
 
-|       |                                                                                                        | Java | Ruby | C   | Lisp (Scheme) | Scala | Haskell | PHP | Bash | PL/SQL | Mathematica |
-| :-:   | :-:                                                                                                    | :-:  | :-:  | :-: | :-:           | :-:   | :-:     | :-: | :-:  | :-:    | :-:         |
-|     1 | <sub><sup> [Multiples of 3 and 5](https://projecteuler.net/problem=1) </sup></sub>                     | x    | x    | x   | x             | x     | x       | x   | x    | x      | x           |
-|     2 | <sub><sup> [Even Fibonacci numbers](https://projecteuler.net/problem=2) </sup></sub>                   | x    | x    | x   | x             | x     |         |     |      | x      | x           |
-|     3 | <sub><sup> [Largest prime factor](https://projecteuler.net/problem=3) </sup></sub>                     | x    | x    | x   |               |       |         |     |      | x      | x           |
-|     4 | <sub><sup> [Largest palindrome product](https://projecteuler.net/problem=4) </sup></sub>               | x    | x    |     |               | x     |         | x   |      |        | x           |
-|     5 | <sub><sup> [Smallest multiple](https://projecteuler.net/problem=5) </sup></sub>                        |      | x    |     |               |       |         |     |      |        | x           |
-|     6 | <sub><sup> [Sum square difference](https://projecteuler.net/problem=6) </sup></sub>                    | x    | x    |     | x             |       |         | x   |      |        | x           |
-|     7 | <sub><sup> [10001st prime](https://projecteuler.net/problem=7) </sup></sub>                            | x    | x    |     |               |       |         |     |      |        | x           |
-|     8 | <sub><sup> [Largest product in a series](https://projecteuler.net/problem=8) </sup></sub>              | x    | x    |     |               |       |         |     |      |        |             |
-|     9 | <sub><sup> [Special Pythagorean triplet](https://projecteuler.net/problem=9) </sup></sub>              | x    | x    |     |               |       |         |     |      |        |             |
-|    10 | <sub><sup> [Summation of primes](https://projecteuler.net/problem=10) </sup></sub>                     | x    | x    |     | x             |       |         |     |      |        | x           |
-|    11 | <sub><sup> [Largest product in a grid](https://projecteuler.net/problem=11) </sup></sub>               | x    | x    |     |               |       |         |     |      |        |             |
-|    12 | <sub><sup> [Highly divisible triangular number](https://projecteuler.net/problem=12) </sup></sub>      | x    | x    |     |               |       |         |     |      |        |             |
-|    13 | <sub><sup> [Large sum](https://projecteuler.net/problem=13) </sup></sub>                               |      | x    |     |               |       |         |     |      |        |             |
-|    14 | <sub><sup> [Longest Collatz sequence](https://projecteuler.net/problem=14) </sup></sub>                | x    | x    |     |               |       |         |     |      |        |             |
-|    15 | <sub><sup> [Lattice paths](https://projecteuler.net/problem=15) </sup></sub>                           | x    |      |     |               |       |         |     |      |        |             |
-|    16 | <sub><sup> [Power digit sum](https://projecteuler.net/problem=16) </sup></sub>                         | x    | x    |     |               |       |         |     |      |        |             |
-|    17 | <sub><sup> [Number letter counts](https://projecteuler.net/problem=17) </sup></sub>                    | x    |      |     |               |       |         |     |      |        |             |
-|    18 | <sub><sup> [Maximum path sum I](https://projecteuler.net/problem=18) </sup></sub>                      | x    |      |     |               |       |         |     |      |        |             |
-|    19 | <sub><sup> [Counting Sundays](https://projecteuler.net/problem=19) </sup></sub>                        | x    |      |     |               |       |         |     |      |        |             |
-|    20 | <sub><sup> [Factorial digit sum](https://projecteuler.net/problem=20) </sup></sub>                     | x    | x    |     | x             |       |         |     |      |        | x           |
+|       |                                                                                             | Java | Ruby | C   | Lisp (Scheme) | Scala | Haskell | PHP | Bash | PL/SQL | Mathematica |
+| :-:   | :-:                                                                                         | :-:  | :-:  | :-: | :-:           | :-:   | :-:     | :-: | :-:  | :-:    | :-:         |
+|     1 | <sub> [Multiples of 3 and 5](https://projecteuler.net/problem=1) </sub>                     | x    | x    | x   | x             | x     | x       | x   | x    | x      | x           |
+|     2 | <sub> [Even Fibonacci numbers](https://projecteuler.net/problem=2) </sub>                   | x    | x    | x   | x             | x     |         |     |      | x      | x           |
+|     3 | <sub> [Largest prime factor](https://projecteuler.net/problem=3) </sub>                     | x    | x    | x   |               |       |         |     |      | x      | x           |
+|     4 | <sub> [Largest palindrome product](https://projecteuler.net/problem=4) </sub>               | x    | x    |     |               | x     |         | x   |      |        | x           |
+|     5 | <sub> [Smallest multiple](https://projecteuler.net/problem=5) </sub>                        |      | x    |     |               |       |         |     |      |        | x           |
+|     6 | <sub> [Sum square difference](https://projecteuler.net/problem=6) </sub>                    | x    | x    |     | x             |       |         | x   |      |        | x           |
+|     7 | <sub> [10001st prime](https://projecteuler.net/problem=7) </sub>                            | x    | x    |     |               |       |         |     |      |        | x           |
+|     8 | <sub> [Largest product in a series](https://projecteuler.net/problem=8) </sub>              | x    | x    |     |               |       |         |     |      |        |             |
+|     9 | <sub> [Special Pythagorean triplet](https://projecteuler.net/problem=9) </sub>              | x    | x    |     |               |       |         |     |      |        |             |
+|    10 | <sub> [Summation of primes](https://projecteuler.net/problem=10) </sub>                     | x    | x    |     | x             |       |         |     |      |        | x           |
+|    11 | <sub> [Largest product in a grid](https://projecteuler.net/problem=11) </sub>               | x    | x    |     |               |       |         |     |      |        |             |
+|    12 | <sub> [Highly divisible triangular number](https://projecteuler.net/problem=12) </sub>      | x    | x    |     |               |       |         |     |      |        |             |
+|    13 | <sub> [Large sum](https://projecteuler.net/problem=13) </sub>                               |      | x    |     |               |       |         |     |      |        |             |
+|    14 | <sub> [Longest Collatz sequence](https://projecteuler.net/problem=14) </sub>                | x    | x    |     |               |       |         |     |      |        |             |
+|    15 | <sub> [Lattice paths](https://projecteuler.net/problem=15) </sub>                           | x    |      |     |               |       |         |     |      |        |             |
+|    16 | <sub> [Power digit sum](https://projecteuler.net/problem=16) </sub>                         | x    | x    |     |               |       |         |     |      |        |             |
+|    17 | <sub> [Number letter counts](https://projecteuler.net/problem=17) </sub>                    | x    |      |     |               |       |         |     |      |        |             |
+|    18 | <sub> [Maximum path sum I](https://projecteuler.net/problem=18) </sub>                      | x    |      |     |               |       |         |     |      |        |             |
+|    19 | <sub> [Counting Sundays](https://projecteuler.net/problem=19) </sub>                        | x    |      |     |               |       |         |     |      |        |             |
+|    20 | <sub> [Factorial digit sum](https://projecteuler.net/problem=20) </sub>                     | x    | x    |     | x             |       |         |     |      |        | x           |
 |   ... | ...                                                                                                    | ...  | ...  |     |               |       |         |     |      |        |             |
 
 ![alt tag](https://raw.githubusercontent.com/timostrating/ProjectEuler/master/ProjectEuler-Dashboard.png)
