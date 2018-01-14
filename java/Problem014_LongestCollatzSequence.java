@@ -11,11 +11,7 @@ public class Problem014_LongestCollatzSequence {
             getal = i;
             teller = 0;
             do {
-                if (getal % 2 == 0) {
-                    getal /= 2;
-                } else {
-                    getal = getal * 3 + 1;
-                }
+                getal = ((getal % 2 == 0))? getal / 2 : getal * 3 + 1;
                 teller++;
             } while (getal > 1);
 
