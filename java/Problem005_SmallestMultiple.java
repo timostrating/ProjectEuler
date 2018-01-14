@@ -1,11 +1,18 @@
 public class Problem005_SmallestMultiple {
-    public static void main (String args[]) {
-        /*1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20*/
+    public static void main (String args[]) { new Problem005_SmallestMultiple(); }
 
-        /*1 2 2 2 2 3 3 5 7 11 13 17 19*/
+    public Problem005_SmallestMultiple() {
+        int number = 1;
+        for (int i=1; i<20; i++)
+            number = lcm(number, i);
 
-        /*232792560*/
+        System.out.println(number);
     }
+
+    int gcd(int m, int n) {  // English  -  Greatest Common Divisor
+        return (n == 0)? m : gcd(n, m % n);
+    }   // Greatest  Common  Divisor
+    int lcm(int m, int n) { return(m * n) / gcd(m, n); }            // Least     Common  Multiple
 }
 
 
