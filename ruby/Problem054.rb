@@ -49,36 +49,70 @@
 
 
 games = [
-  "5H 5C 6S 7S KD   2C 3S 8S 8D TD",
-  "5D 8C 9S JS AC   2C 5C 7D 8S QH",
-  "2D 9C AS AH AC   3D 6D 7D TD QD",
-  "4D 6S 9H QH QC   3D 6D 7H QD QS",
-  "2H 2D 4C 4D 4S   3C 3D 3S 9S 9D"
+  "5H 5C 6S 7S KD  2C 3S 8S 8D TD",
+  "5D 8C 9S JS AC  2C 5C 7D 8S QH",
+  "2D 9C AS AH AC  3D 6D 7D TD QD",
+  "4D 6S 9H QH QC  3D 6D 7H QD QS",
+  "2H 2D 4C 4D 4S  3C 3D 3S 9S 9D",
+
+  "8C TS KC 9H 4S  7D 2S 5D 3S AC",
+  "5C AD 5D AC 9C  7C 5H 8D TD KS",
+  "3H 7H 6S KC JS  QH TD JC 2D 8S",
+  "TH 8H 5C QS TC  9H 4D JC KS JS",
+  "7C 5H KC QH JD  AS KH 4C AD 4S",
+  "5H KS 9C 7D 9H  8D 3S 5D 5C AH",
+  "6H 4H 5C 3H 2H  3S QH 5S 6S AS"
 ]
 
 
+# enum {
+#   FOO,
+#   BAR,
+#   BAZ
+# }
+:high_card          # Highest value card.
+:one_pair           # Two cards of the same value.
+# :Two Pairs          # Two different pairs.
+# :Three of a Kind    # Three cards of the same value.
+# :Straight           # All cards are consecutive values.
+# :Flush              # All cards of the same suit.
+# :Full House         # Three of a kind and a pair.
+# :Four of a Kind     # Four cards of the same value.
+# :Straight Flush     # All cards are consecutive values of same suit.
+# :Royal Flush        # Ten, Jack, Queen, King, Ace, in same suit.
+
+
 class Card
+  attr_accessor :card
+  
 	def initialize v
-		puts v
+		# puts v
 	end
 end
 
+
 class Hand 
-	:value
+  attr_accessor :cards
+  attr_accessor :score
 
 	def initialize v
 		puts v.inspect
-	end
+  end
+  
+  def <(other)
+    puts "magic"
+  end
 end
 
 
 wins = 0
 
-(0..games.length).each do |i|
+(0...games.length).each do |i|
   game = games[i]
   player_one = Hand.new(game.split(" ")[0..4])
   player_two = Hand.new(game.split(" ")[5..9])
 
-  puts player_one
-  puts player_two
+  if player_one < player_two
+    wins += 1
+  end
 end
