@@ -1,0 +1,65 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframEngine 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       160,          7]
+NotebookDataLength[      1453,         57]
+NotebookOptionsPosition[      1151,         41]
+NotebookOutlinePosition[      1489,         56]
+CellTagsIndexPosition[      1446,         53]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Mod", "[", 
+  RowBox[{
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{"i", "^", "i"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", " ", "1", ",", " ", "1000"}], "}"}]}], "]"}], ",", 
+   " ", 
+   RowBox[{"10", "^", "10"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7277956302149982`*^9, 3.7277957258953876`*^9}, {
+  3.727797613063341*^9, 3.727797669475067*^9}, {3.727797749907999*^9, 
+  3.727797751830914*^9}},
+ FormatType->"InputForm"],
+
+Cell[BoxData["9110846700"], "Output",
+ CellChangeTimes->{3.727797754791979*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 897},
+WindowMargins->{{Automatic, 554}, {Automatic, 67}},
+FrontEndVersion->"11.0 for Linux ARM (32-bit) (January 17, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[582, 22, 471, 13, 34, "Input"],
+Cell[1056, 37, 79, 1, 32, "Output"]
+}, Open  ]]
+}
+]
+*)
+
