@@ -1,0 +1,1 @@
+First[First[SequencePosition[Map[Length, FactorInteger[Range[199999]]], {4, 4, 4, 4}]]]
