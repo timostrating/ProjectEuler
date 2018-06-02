@@ -21,7 +21,7 @@ sum = 0
     v1 = proper_deviders_sum(i)
     v2 = proper_deviders_sum(v1)
 
-    if (v1 == v2 && v2 != i)
+    if (i == v2 && v2 != v1)
         sum += i
     end
 
