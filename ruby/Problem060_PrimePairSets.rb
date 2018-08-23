@@ -11,6 +11,7 @@ def concatNumbers(a,b)
     return a*(10 ** Math.log10(b+1).ceil) + b
 end
 
+# A concat B is Prime  &&  B concat A is Prime
 def concatPrime(a, b)
     b1 = @primeSet.include?(concatNumbers(a,b))
     b2 = @primeSet.include?(concatNumbers(b,a))
