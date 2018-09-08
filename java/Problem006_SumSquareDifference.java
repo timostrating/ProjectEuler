@@ -6,16 +6,12 @@ public class Problem006_SumSquareDifference {
         int amount = 100;
         long a = 0, b = 0;
 
-        for (int i=0; i <= amount; i++)
+        for (int i=0; i <= amount; i++) {
             a += i*i;
-
-        for (int i=0; i <= amount; i++)
             b += i;
+        }           
 
         b *= b;
-
-        System.out.println("a = " + a);
-        System.out.println("b = " + b);
 
         System.out.println("ans = " + (b - a));
     }
