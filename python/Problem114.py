@@ -15,21 +15,21 @@ def memoize(function):
 
 
 
-min_car_lenth = 3
+car_min_length = 3
 
 @memoize
 def counting_block(spaces, first_time=True):  
-    if spaces < min_car_lenth: # less than 3 spots has no solution
+    if spaces < car_min_length: # less than 3 spots has no solution
         return 0
 
     count = 0
     if first_time == True:  # first time running
         spaces += 1  
 
-    for auto_lengte in range(min_car_lenth, spaces): # Loop posible car lenths
-        for space_left in range(spaces - auto_lengte):         # loop posible start positions
-            spaceright = spaces - (space_left + auto_lengte + 1)   # calculate the space that is left
-            count += 1 + counting_block(spaceright, False)                    # recursive call
+    for car_length in range(car_min_length, spaces): # Loop posible car lenths
+        for space_left in range(spaces - car_length):         # loop posible start positions
+            space_right = spaces - (space_left + car_length + 1)   # calculate the space that is left
+            count += 1 + counting_block(space_right, False)                    # recursive call
 
     return count + 1 if first_time == True else count
 
