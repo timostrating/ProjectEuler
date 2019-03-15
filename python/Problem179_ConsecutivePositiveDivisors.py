@@ -1,6 +1,6 @@
 import math
 
-maxi = 20  # 10**3
+maxi = 10**7
 points = [0] * maxi
 
 for n in range(1, maxi +1):
