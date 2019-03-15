@@ -15,4 +15,4 @@ for i in range(len(points) - 1):
         sum += 1
 
 print(points)
-print(sum)  # 986262
+print(sum)
