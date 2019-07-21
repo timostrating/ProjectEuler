@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 int main()
 {
@@ -8,7 +9,7 @@ int main()
         if (i % 3 == 0 || i % 5 == 0)
             sum += i;
 
-    std::cout << sum << std::endl;
+    cout << sum << endl;
 
     return 0;
 }
