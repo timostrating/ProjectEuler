@@ -1,21 +1,16 @@
 import math
 
-maxi = 6000
-points = [0] * maxi
+# maxi = 6000
+# points = [0] * maxi
 
-for n in range(1, maxi +1):
-    i = n
-    while i < maxi:
-        points[i] += 1
-        i += n
+# for n in range(1, maxi +1):
+#     i = n
+#     while i < maxi:
+#         points[i] += 1
+#         i += n
 
-print(points)
-print(points[2])
-print(points[6])
-print(points[24])
-print(points[120])
-print(points[720])  # WRONG
-print(points[5040]) # WRONG
+# print(points)
+
 
 # 2**1  2   =>  2!=2
 # 2**2  4   =>  3!=6
@@ -26,3 +21,22 @@ print(points[5040]) # WRONG
 
 # for i in range(20):
 #     print(math.factorial(i))
+
+
+def magic(number):
+	count = 0
+	for i in range(1, int(math.sqrt(number)) +1):
+		if (number / i == number // i):
+			# print(f"{number} is devidable by {i} and {number // i}")
+			
+			count += 2
+			if (i == number // i):
+				count -= 1
+
+	return count
+
+
+for i in range(200):
+	print(i, magic(i))
+
+# print(magic(30))
