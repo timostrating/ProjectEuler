@@ -44,7 +44,7 @@ def generate_primes(n):
 def divisors(n):
     primes = generate_primes((n // 6) +1) # Large Prime * LOWEST PRIME * SECOND LOWEST PIRME  ==>  Large Pprime * (3*2)  ==>  max prime needed < ciel(n / 6) 
     count = 0
-    print("Primes generated")
+    print("Primes generated", len(primes), primes[-1])
 
     for p1 in primes:   # PRIME^3 * PRIME
         if p1 ** 3 > n:
