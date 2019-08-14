@@ -24,4 +24,5 @@ int main()
     } while ( ++i <= 1000);
 
     cout << sum << endl;
+    return 0;
 }

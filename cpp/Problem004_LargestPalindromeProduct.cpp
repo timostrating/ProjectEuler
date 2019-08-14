@@ -6,15 +6,12 @@ using std::cout;
 // if reverse of the number == number it is a palindrome
 bool isPalindrome(int num)
 {
-    int reverse = 0, remainder, temp;
-    temp = num; // original number is stored in temp variable
-    while( temp != 0)
+    int reverse = 0, temp = num; // original number is stored in temp variable
+    while(temp != 0)
     {
-        remainder = temp % 10;
-        reverse = reverse * 10 + remainder;
+        reverse = reverse * 10 + (temp % 10);
         temp = temp / 10;
     }
-
     return (num == reverse);
 }
 
@@ -29,4 +26,5 @@ int main()
                     max = i*j;
 
     cout << max << "\n";
+    return 0;
 }

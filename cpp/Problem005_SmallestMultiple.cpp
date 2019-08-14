@@ -11,12 +11,9 @@ int main()
             if (data[i] % data[j] == 0)
                 data[i] = data[i] / data[j];
 
-    long sum = 1;
+    int64_t sum = 1;
     for(int i=0; i<MAX; i++) // The product of the array is now the answer
-    {
         sum *= data[i];
-        cout << i+1 << " " << data[i] << "\n";
-    }
 
     cout << sum << "\n";    
     return 0;

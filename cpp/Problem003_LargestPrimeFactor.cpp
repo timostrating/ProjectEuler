@@ -1,8 +1,9 @@
 #include <iostream>
+using std::cout;
 
 int main()
 {
-    long v = 600851475143;
+    int64_t v = 600851475143;
     int i = 1;
 
     while (v > 1)
@@ -12,6 +13,6 @@ int main()
             v /= i;
     }
 
-    std::cout << i << std::endl;
+    cout << i;
     return 0;
 }
