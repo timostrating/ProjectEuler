@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #define SIZE 100
 #define TEN_DIGITS 10000000000
 using std::cout;
@@ -29,4 +28,3 @@ int main()
     cout << sum;
     return 0;
 }
-
