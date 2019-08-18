@@ -3,6 +3,7 @@
  */
 public class Problem015_LatticePaths {
     public static void main(String args[]) {
+        // I solved this Problem on paper back in 2016
         int width = 4;
         int height = 4;
         long routes = 2;
