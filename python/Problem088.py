@@ -1,47 +1,57 @@
-MAX = 12
-LOOPS = 3
+import sys
+import threading
 
-def break_now(*n):
-    ns = []
-    for x in n:
-        ns.append(x)
-    for x in range(LOOPS):
-        ns.append(n[-1])    
+MAX = 12000
+QQQ = 99999999999
 
-    mul = 1
-    plus = 0
-    for i in range(LOOPS):
-        mul *= ns[i]
-        plus += ns[i]
-
-    return (mul) - (plus) > MAX - LOOPS
+results = [QQQ] * (MAX + 1)
 
 
-dictionary = {}
+################################
+##  DO NOT TRUST THE RESULTS  ##
+################################
 
-for a in range(1, MAX):
-    if break_now(a):
-            break
+
+def magic(muls, sums, depth):
+    if depth >= MAX:
+        return
     
-    for b in range(max(2,a), MAX // 4 + 1):
-        if break_now(a, b):
-            break
+    for i in range(1, MAX // 2**(depth-1)):
+        muls_copy = int(str(muls))
+        sums_copy = int(str(sums))
 
-        for c in range(max(2,b), MAX // 2 +1):
-            if break_now(a, b, c):
-                break
+        muls_copy *= i
+        sums_copy += i
+        diff = muls_copy - sums_copy
 
-            muls = (a * b * c)
-            diff = muls - (a + b + c)
-            print(f"{a}*{b}*{c} - {a}+{b}+{c} = {diff}")
-            # if diff >= 0:  # Maybe we need this check
-            if (LOOPS + diff >= 2 and LOOPS + diff <= MAX):
-                if dictionary.__contains__(LOOPS + diff):
-                    if dictionary[LOOPS + diff] > muls:
-                        dictionary[LOOPS + diff] = muls
-                else:
-                    dictionary[LOOPS + diff] = muls
+        if diff == 0:
+            if results[depth] > muls_copy:
+                results[depth] = muls_copy
 
-count_set = set(dictionary.values())
-print(count_set)
-print(sum(count_set))
+        elif diff > 0:
+            if depth + diff <= MAX and results[depth + diff] > muls_copy:
+                results[depth + diff] = muls_copy
+                
+        else: # diff < 0
+            magic(muls_copy, sums_copy, depth + 1)
+
+
+def main():
+    for i in range(1, (MAX // 2)+1):
+        magic(i, i, 2)
+
+    print(results)
+    print(sorted(list(set(results))))
+
+    final = set()
+    for v in results:
+        if v != QQQ:
+            final.add(v)
+    
+    print("\n")
+    print(sum(final))
+
+
+sys.setrecursionlimit(10**7)  # max depth of recursion
+threading.stack_size(2**27)   # new thread will get stack of such size
+threading.Thread(target=main).start()
