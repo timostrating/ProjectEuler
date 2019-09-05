@@ -7,7 +7,7 @@ HAI 1.2
     	
     	O RLY?
     	    YA RLY
-		        sum R SUM OF sum AN i 
+				sum R SUM OF sum AN i 
 		        
 		OIC
 		        
