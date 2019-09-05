@@ -1,3 +1,5 @@
+import math
+
 dictionary = {}
 def factorial_ending_slow(n):
     fac = 1
@@ -36,7 +38,7 @@ def factorial_ending(n):
     return fac
 
 
-# for i in range(9, 100):
-#     print(i, factorial_ending(i))
+for i in range(1, 25):
+    print(i, math.factorial(i))
 
-print(factorial_ending(10**12))
+# print(factorial_ending(10**12))

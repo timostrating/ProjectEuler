@@ -11,32 +11,31 @@ def is_palindrome(n_int):
 
     return True
 
+assert is_palindrome(12321)
+assert is_palindrome(123321)
 
-count = 0
 count_sum = 0
 sumation = 0
-i = 1
-while i <= LOOPS:
-    # print(sumation, f"+{i}^2")
-
-    sumation += i**2
+right_index = 0
+while right_index <= LOOPS:
+    # print("\t", sumation, f"+{right_index}^2")
+    
+    right_index += 1
+    sumation += right_index**2
     if sumation < MAX and sumation > 1 and is_palindrome(sumation):
-        count += 1
         count_sum += sumation
-        print(count, sumation, "?", i)
+        print(sumation, "_1_", right_index)
 
-    sum_copy = int(str(sumation))
-    i += 1
-    j = 1
-    while j < i - 2:
-        # print(sumation, f"-{j}^2")
-        sumation -= j**2
-        j += 1
+    sum_copy = sumation
+    left_index = 1
+    while left_index <= right_index - 2:
+        # print("\t", sumation, f"-{left_index}^2")
+        sumation -= left_index**2
+        left_index += 1
         if sumation < MAX and is_palindrome(sumation):
-            count += 1
             count_sum += sumation
-            print(count, sumation, j, i)
-
+            print(sumation, left_index, right_index)
+            
     sumation = sum_copy 
 
 print(count_sum)

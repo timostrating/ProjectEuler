@@ -1,40 +1,32 @@
 # import math
+import sympy
 
-# squares = [0]
-# for i in range(1, 10**6): # math.ceil(math.sqrt(10**3))):
-#     squares.append(i*i)
+primes = list(sympy.sieve.primerange(0, 10**5))
 
-# total = 0
-# index = 0
-# for i in range(1, 10**3 + 1):
-#     if squares[index +1] == i-1:
-#         index += 1
-#     print(i, "added", index)
-#     total += index
-# print(total)
+# def M_naive(n):
+#     v = 0
+#     for a in range(n):
+#         # print("{}={}".format((a**2) % n, a % n, end=" "))
+#         if a**2 % n == a % n:
+#             v = a**2 % n
+#     return v
 
-
-def M_naive(n):
+def M(n):   
     v = 0
     for a in range(n):
-        # print("{}={}".format((a**2) % n, a % n, end=" "))
-        if a**2 % n == a % n:
-            v = a**2 % n
-    return v
-
-def M(n):
-    v = 0
-    for a in range(n):
-        # print("{}={}".format((a**2) % n, a % n, end=" "))
+        print("{}={}".format((a**2) % n, a % n), end=" ")
         if a**2 % n == a % n:
             v = a**2 % n
     return v
 
 # print(M(6))
-total = 0
-for n in range(1, 10**5 +1):
-    total += M(n)
-print(total)
+# total = 0
+for n in range(1, 10**2 +1):
+    print(n, end=": ")
+    print("Highest", M(n), sympy.isprime(n))
+    print("")
+#     total += M(n)
+# print(total)
 
 # for size in range(6, 7):
 #     print(size)

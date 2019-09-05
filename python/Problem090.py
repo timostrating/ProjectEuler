@@ -13,11 +13,26 @@ def cube_digits():
                                 yield (a,b,c,d,e,f)
 
 
+def valid(seta, setb):
+    if (0 in seta and 1 in setb) or (1 in seta and 0 in setb):
+        if (0 in seta and 4 in setb) or (4 in seta and 0 in setb):
+            if (0 in seta and 9 in setb) or (9 in seta and 0 in setb):
+                if (1 in seta and 6 in setb) or (6 in seta and 1 in setb):
+                    if (2 in seta and 5 in setb) or (5 in seta and 2 in setb):
+                        if (3 in seta and 6 in setb) or (6 in seta and 3 in setb):
+                            if (4 in seta and 9 in setb) or (9 in seta and 4 in setb):
+                                if (6 in seta and 4 in setb) or (4 in seta and 6 in setb):
+                                    if (8 in seta and 1 in setb) or (1 in seta and 8 in setb):
+                                        return True
+    return False
+assert valid((0,5,6,7,8,9), (1,2,3,4,8,9))
+
+
 total = 0
 for cube in cube_digits():
-    for cube2 in cube_digits():
-        print(cube, cube2)
-        total += 1
+    print(cube)
+    # for cube2 in cube_digits():
+    #     if valid(cube, cube2):
+    #         total += 1
 
-print("")
 print(total)

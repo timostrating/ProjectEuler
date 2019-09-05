@@ -16,7 +16,7 @@ def squarefree_below_naive(n):
     digits = []
     for i in range(n):
         digits.append(i+1)
-    
+
     primes = generate_primes(int(math.sqrt(n)) + 1)
     print(f"Primes up to {int(math.sqrt(n)) + 1} recieved from god, it are {len(primes)} numbers ")
 
@@ -35,7 +35,7 @@ def squarefree_below_naive(n):
             i += sqr_p
 
         # print("\t\t\t", p, "=", count)
-    
+
     # print(digits)
     return len(digits)
 
@@ -49,7 +49,7 @@ def squarefree_below(n):
     for p in primes:
         to_end = n // (p*p)
         total -= to_end
-        
+
 
         sum_sqrs = 0
         for sq in sqrs:
@@ -62,7 +62,7 @@ def squarefree_below(n):
                 else:
                     # print("BREACK", sq, sq2)
                     break
-        
+
         # print(p, "=", [to_end, sum_sqrs])
         sqrs.append(p*p)
         total += sum_sqrs
@@ -71,45 +71,37 @@ def squarefree_below(n):
 
 
 def squarefree_below_fast(n):
-    total = n
     primes = generate_primes(int(math.sqrt(n)) + 1)
     print(f"Primes up to {int(math.sqrt(n)) + 1} recieved from god, it are {len(primes)} numbers ")
-    correct = True
 
     sqrs = []
+    tmp = 2
+    while tmp ** 2 < n:
+        sqrs.append(tmp**2)
+        tmp += 1
+
+    total = n
     for p in primes:
-        to_end = n // (p*p)
-        total -= to_end
-        
+        total -= n // p**2
 
-        sum_sqrs = 0
-        if (correct):
-            for sq in sqrs:
-                sum_sqrs += to_end // sq
-                for sq2 in sqrs:
-                    if sq > sq2:
-                        correction = to_end // (sq * sq2)
-                        # print(sq, sq2, correction) 
-                        sum_sqrs -= correction
-                    else:
-                        # print("BREACK", sq, sq2)
-                        break
-
-        if sum_sqrs == 0 and p != 2:
-            correct = False 
-            
-        # print(p, "=", [to_end, sum_sqrs])
-        sqrs.append(p*p)
-        total += sum_sqrs
-    
     return total
 
+print(squarefree_below_fast(50))
+print(squarefree_below(50))
+print(squarefree_below_naive(50))
 
-print(squarefree_below_fast(50000))
-# print(squarefree_below(2**30))
-print(squarefree_below_naive(50000))
+
+# 2  4    50//4 = 12   4,8,12,16,20,24,28,32,36,40,44,48
+# 3  9    50//9 = 5    9,18,27,36,45
+# 5  25   50//25 = 2
+# 7  49   
 
 
-# 4
-# 9
-# 25
+"""
+ 1,  2,  3,  4,  5,  6,  7,  8,  9,
+11, 12, 13, 14, 15, 16, 17, 18, 19,
+21, 22, 23, 24, 25, 26, 27, 28, 29,
+31, 32, 33, 34, 35, 36, 37, 38, 39,
+41, 42, 43, 44, 45, 46, 47, 48, 49,
+"""
+

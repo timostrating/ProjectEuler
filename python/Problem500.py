@@ -1,16 +1,20 @@
 import math
 
-# maxi = 6000
-# points = [0] * maxi
+maxi = 1000
+
+def devisors(n):
+        divs = 2
+        for i in range(2, int(math.sqrt(n)) +1):
+                if n % i == 0:
+                        print(f"{n} % {i} == 0", f"\t\t{n} % {n//i} == 0")
+                        divs += 2
+                else:
+                        print("nope", i)
+        return divs
+assert devisors(720) == 30
 
 # for n in range(1, maxi +1):
-#     i = n
-#     while i < maxi:
-#         points[i] += 1
-#         i += n
-
-# print(points)
-
+#         print(f"{n}: \t {devisors(n)}")
 
 # 2**1  2   =>  2!=2
 # 2**2  4   =>  3!=6
@@ -21,22 +25,3 @@ import math
 
 # for i in range(20):
 #     print(math.factorial(i))
-
-
-def magic(number):
-	count = 0
-	for i in range(1, int(math.sqrt(number)) +1):
-		if (number / i == number // i):
-			# print(f"{number} is devidable by {i} and {number // i}")
-			
-			count += 2
-			if (i == number // i):
-				count -= 1
-
-	return count
-
-
-for i in range(200):
-	print(i, magic(i))
-
-# print(magic(30))

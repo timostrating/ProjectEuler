@@ -40,9 +40,12 @@ def generate_primes(n):
             sieve[i+val::val] = [0]*tmp
     return [2] + [i*2+1 for i, v in enumerate(sieve) if v and i>0]
 
+def all_primes(start, end):
+    return list(sorted(set(range(start,end+1)).difference(set((p * f) for p in range(2, int(end ** 0.5) + 2) for f in range(2, (end/p) + 1)))))
 
 def divisors(n):
-    primes = generate_primes((n // 6) +1) # Large Prime * LOWEST PRIME * SECOND LOWEST PIRME  ==>  Large Pprime * (3*2)  ==>  max prime needed < ciel(n / 6) 
+    primes = all_primes(0, (n // 6) +1)
+    # primes = generate_primes((n // 6) +1) # Large Prime * LOWEST PRIME * SECOND LOWEST PIRME  ==>  Large Pprime * (3*2)  ==>  max prime needed < ciel(n / 6) 
     count = 0
     print("Primes generated", len(primes), primes[-1])
 
