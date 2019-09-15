@@ -2,6 +2,19 @@ import math
 
 maxi = 1000
 
+# https://en.wikipedia.org/wiki/Euler%27s_totient_function
+import fractions
+
+def phi(n):
+    amount = 0        
+    for k in range(1, n + 1):
+        if fractions.gcd(n, k) == 1:
+            amount += 1
+    return amount
+
+print(phi(123))
+
+
 def devisors(n):
         divs = 2
         for i in range(2, int(math.sqrt(n)) +1):
