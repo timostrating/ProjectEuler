@@ -1,6 +1,6 @@
 import math
 
-MAX = 10**5
+MAX = 10**7
 
 def generate_primes(n): 
     size = n//2
@@ -16,16 +16,12 @@ def generate_primes(n):
 PRIMES = generate_primes(MAX)
 print("Primes generated")
 
+
 def gcd(m, n):
     if (n == 0):
         return m
     else:
         return gcd(n, m % n)
-
-# assert gcd(9,6) == 3
-# assert gcd(9,3) == 3
-
-
 
 
 def is_permutation(a, b):
@@ -42,21 +38,6 @@ def is_permutation(a, b):
 
     return True
 
-# assert is_permutation(123, 231)
-# assert is_permutation(122, 221)
-# assert is_permutation(12, 221) == False
-# assert is_permutation(12, 31) == False
-
-
-
-    
-def phi_naive(n):
-    count = 0
-    for i in range(n):
-        if gcd(i, n) == 1:
-            count += 1
-    return count
-
 
 def phi(n):
     if n == 1:
@@ -70,7 +51,7 @@ def phi(n):
         if (n % p == 0):
             results.append(p)
             while math.ceil(n / p) == math.floor(n / p):
-                n =  n // p
+                n = n // p
 
         prime_index += 1
 
@@ -80,11 +61,6 @@ def phi(n):
     return int(original_n)
 
 
-
-
-# for i in range(1, 1000):
-#     # print(i, phi_fast(i), "==", phi_naive(i))
-#     assert phi_fast(i) == phi_naive(i)
 
 prime_index = 1
 
@@ -110,10 +86,4 @@ The number 1 is considered to be relatively prime to every positive number, so �
 Interestingly, φ(87109)=79180, and it can be seen that 87109 is a permutation of 79180.
 
 Find the value of n, 1 < n < 107, for which φ(n) is a permutation of n and the ratio n/φ(n) produces a minimum.
-"""
-
-
-
-"""
-[21,291,2817,2991,4435,20617,45421,69271,75841,162619,176569,284029,400399,474883,732031,778669,783169]
 """
