@@ -1,0 +1,18 @@
+fn main() {
+    let mut values = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+    for x in 1..20 {
+        for y in (x+1)..20 {
+            if values[y] % values[x] == 0 {
+                values[y] /= values[x];
+            }
+        }
+    }
+
+    let mut total = 1;
+    for i in 0..20 {
+        // println!("{}", values[i]);
+        total *= values[i];
+    }
+
+    println!("{}", total);
+}
