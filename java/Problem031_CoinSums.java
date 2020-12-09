@@ -34,8 +34,6 @@ public class Problem031_CoinSums {
      5        5
          10
 
-73682
-
 $2          1
 $1          2
 $0,50       4
